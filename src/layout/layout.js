@@ -1,19 +1,43 @@
 import React from 'react';
-import './layout.css';
+import './layout.scss';
+import MainContextProvider from '../context/mainContext.js';
+import Wood from '../assets/wood.jpg';
 import Navbar from '../components/navbar/navbar.js';
-import Display from '../components/display/display.js';
+import Header from '../components/header/header.js';
+import {
+		BrowserRouter as Router,
+		Switch,
+		Route
+} from 'react-router-dom';
+import Home from '../pages/home/home.js';
+import About from '../pages/about/about.js';
+import Skills from '../pages/skills/skills.js';
+import Projects from '../pages/projects/projects.js';
+import Contact from '../pages/contact/contact.js';
+import Error from '../pages/error/error.js';
 
-const layout = () => {
+const Layout = () => {
 
 return(
 		<div className='layout'>
+		<MainContextProvider>
+		<Router>
 				<div className='navbarContainer'>
 						<Navbar/>
 				</div>
-				<div className='displayContainer'>
-						<Display/>
+				<div className='pageContainer'>
+						<Switch>
+						<Route exact path='/'  component={Home}/>
+						<Route exact path='/about'  component={About}/>
+						<Route exact path='/skills' component={Skills}/>
+						<Route exact path='/projects' component={Projects}/>
+						<Route exact path='/contact' component={Contact}/>
+						<Route component={Error}/>
+						</Switch>
 				</div>
+		</Router>
+		</MainContextProvider>
 		</div>
 )};
 
-export default layout;
+export default Layout;

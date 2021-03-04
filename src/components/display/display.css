@@ -1,12 +1,11 @@
 .displayDuo {
 		display: flex;
 		flex-direction: row;
-		height: 100vh;
+		height: 100%;
 }
 
 
 .displayGrid{
-		padding-top: 100px;
 		padding-left: 100px;
 		display: grid;
 		grid-template-columns: auto auto;
