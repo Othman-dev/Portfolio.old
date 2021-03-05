@@ -1,9 +1,7 @@
 import React from 'react';
 import './layout.scss';
 import MainContextProvider from '../context/mainContext.js';
-import Wood from '../assets/wood.jpg';
 import Navbar from '../components/navbar/navbar.js';
-import Header from '../components/header/header.js';
 import {
 		BrowserRouter as Router,
 		Switch,

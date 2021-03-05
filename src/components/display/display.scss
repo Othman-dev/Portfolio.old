@@ -1,0 +1,42 @@
+/*-----     DUO     -----*/
+
+.displayDuo {
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+}
+
+.leftSide {
+		height: 100%;
+		width: 50%;
+		float: left;
+		text-align: center;
+		outline: solid;
+}
+
+.rightSide {
+		height: 100%;
+		width: 50%;
+		float: right;
+		text-align: center;
+		outline: solid;
+}
+
+
+/*-----     GRID     -----*/
+
+.displayGrid{
+		padding-left: 100px;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 90px;
+}
+
+.gridBox{
+		height: 35vh;
+		width: 35vw;
+		outline: solid;
+		background-color: yellow;
+		opacity: 50%;
+		text-align: center;
+}

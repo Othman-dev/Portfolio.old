@@ -4,9 +4,29 @@ const MainReducer = (main, action) => {
 						return{
 						...main, 'music': !main.music 
 						};
-				case 'themeSwitch':
+				case 'frenchSwitch':
 						return{
-						...main, 'lang': !main.lang
+						...main, 'french': !main.french
+						};
+				case 'homePage':
+						return{
+						...main, 'page': 'home'
+						};
+				case 'skillsPage':
+						return{
+						...main, 'page': 'skills'
+						};
+				case 'contactPage':
+						return{
+						...main, 'page': 'contact'
+						};
+				case 'projectsPage':
+						return{
+						...main, 'page': 'projects'
+						};
+				case 'aboutPage':
+						return{
+						...main, 'page': 'about'
 						};
 				default:
 						return main;

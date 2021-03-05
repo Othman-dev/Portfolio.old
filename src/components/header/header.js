@@ -1,13 +1,13 @@
 import React from 'react';
-import './header.css';
+import './header.scss';
 
 const Header = (props) => {
 		
 		const { title } = props;
 
 return(
-		<div classNames='header'>
-				<h1>{title}</h1>
+		<div className='header'>
+				{title}
 		</div>
 )};
 

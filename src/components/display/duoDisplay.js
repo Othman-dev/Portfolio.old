@@ -1,17 +1,15 @@
 import React from 'react';
-import './display.css';
+import './display.scss';
 
 const DuoDisplay = (props) => {
 
 return(
-		<div>
-				<div className='displayDuo'>
-						<div className='leftSide'>
-								leftside
-						</div>
-						<div className='rightSide'>
-								rightside
-						</div>
+		<div className='displayDuo'>
+				<div className='leftSide'>
+						leftside
+				</div>
+				<div className='rightSide'>
+						rightside
 				</div>
 		</div>
 )};
