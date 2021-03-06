@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import DuoDisplay from '../../components/display/duoDisplay.js';
-import Header from '../../components/header/header.js';
+import Loading from '../../components/loading/loading.js';
 import { MainContext } from '../../context/mainContext.js';
 
 
@@ -14,7 +14,7 @@ const Contact = () => {
 
 return (
 		<div>
-				<Header title='Contact'/>
+				<Loading title='Contact'/>
 				<DuoDisplay/>
 		</div>
 )};

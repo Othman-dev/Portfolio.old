@@ -1,0 +1,66 @@
+@import '../../_default.scss';
+
+.loading {
+		background-color: $primary;
+		position: absolute;
+		display: flex;
+		margin-left: 150px;
+		flex-direction: column;
+		height: 100vh;
+		width: 100%;
+		box-shadow: 0px 0px 5px 2px black;
+		animation: loading 2s ease-out;
+		justify-content: center;
+		align-items: center;
+		z-index: 5;
+}
+
+@keyframes loading {
+		0% {left:0%}
+		65% {left: 0%}
+		100% {left: -100%}
+}
+
+.soundLogo {
+		width: 300px;
+
+		.soundImage {
+				height:120px;
+				width: 300px;
+				z-index: 2;
+		}
+		.soundAnim {
+				background-color: $primary;
+				box-shadow: 0px 0px 3px 2px $active-light;
+				height: 10px;
+				width: 10px;
+				border-radius: 50%;
+				z-index: 3;
+				transform: translate( 6px,-63px );
+				animation: sinusoide 0.7s infinite;
+		}
+
+		@keyframes sinusoide{
+				0% {transform: translate( 6px,-63px )}
+				5% {transform: translate( 25px,-62px )}
+				7.5% {transform: translate( 39px,-55px )}
+				15% {transform: translate( 57px,-73px )}
+				22.5% {transform: translate( 77px,-45px )}
+				30% {transform: translate( 96px,-122px )}
+				37.5% {transform: translate( 116px,-16px )}
+				45% {transform: translate( 134px,-100px )}
+				55% {transform: translate( 154px,-39px )}
+				62.5% {transform: translate( 172px,-77px )}
+				70% {transform: translate( 192px,-50px )}
+				77.5% {transform: translate( 210px,-72px )}
+				85% {transform: translate( 230px,-56px )}
+				92.5% {transform: translate( 249px,-67px )}
+				95% {transform: translate( 264px,-62px )}
+				100% {transform: translate( 284px,-63px )}
+		}
+}
+
+.loadingText {
+		color: $green-logo;
+		font-size: 35px;
+}

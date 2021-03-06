@@ -10,14 +10,18 @@
 /*-----     LOGO     -----*/
 
 .logoContainer {
-		height: 250px;
-		width: 250px;
+		position: relative;
+		top: 25px;
+		height: 200px;
+		width: 200px;
 }
 
 .logo {
 		height: 100%;
 		width: 100%;
 		border-radius: 60%;
+		background-color: $primary;
+		box-shadow: 0px 0px 3px 5px $primary;
 }
 
 /*-----     MENU     -----*/
@@ -33,9 +37,9 @@
 				display: flex;
 				justify-content: space-around;
 
-				.about {
+				.contact {
 						position: relative;
-						transform: translate( -40px,40px );
+						transform: translate( -47px,40px );
 						text-decoration: none;
 						color: black;
 				}
@@ -46,7 +50,7 @@
 						color: black;
 				}
 
-				.skills {
+				.about {
 						position: relative;
 						transform: translate( 40px,40px );
 						text-decoration: none;
@@ -75,33 +79,33 @@
 						transform: translate( 57px, -0.5px );
 				}		
 		}
-		.knobSkills {
+		.knobAbout {
 				transform: rotate(60deg);
 		}
-		.knobContact {
+		.knobSkills {
 				transform: rotate(120deg);
 		}
 		.knobProjects {
-				transform: rotate(240deg);
+				transform: rotate(-120deg);
 		}
-		.knobAbout {
-				transform: rotate(300deg);
+		.knobContact {
+				transform: rotate(-60deg);
 		}
 
 		.menuBottom {
 				display: flex;
 				justify-content: space-around;
 
-				.projects {
+				.skills {
 						position: relative;
-						transform: translate( -50px,-40px );
+						transform: translate( 40px,-40px );
 						text-decoration: none;
 						color: black;
 				}
 
-				.contact {
+				.projects {
 						position: relative;
-						transform: translate( 50px,-40px );
+						transform: translate( -55px,-40px );
 						text-decoration: none;
 						color: black;
 				}

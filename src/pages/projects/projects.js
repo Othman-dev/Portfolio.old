@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import GridDisplay from '../../components/display/gridDisplay.js';
-import Header from '../../components/header/header.js';
+import Loading from '../../components/loading/loading.js';
 import { MainContext } from '../../context/mainContext.js';
 
 const Projects = () => {
@@ -13,7 +13,7 @@ const Projects = () => {
 
 return (
 		<div>
-				<Header title='Projects page'/>
+				<Loading title='Projects'/>
 				<GridDisplay/>
 		</div>
 )};

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import Header from '../../components/header/header.js';
+import Loading from '../../components/loading/loading.js';
 import { MainContext } from '../../context/mainContext.js';
 
 
@@ -14,7 +14,7 @@ const Home = () => {
 
 return (
 		<div>
-				<Header title='Home page'/>
+				<Loading/>
 		</div>
 )};
 

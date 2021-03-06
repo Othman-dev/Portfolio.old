@@ -1,4 +1,5 @@
 const MainReducer = (main, action) => {
+
 		switch(action.type){
 				case 'musicSwitch':
 						return{
@@ -12,21 +13,21 @@ const MainReducer = (main, action) => {
 						return{
 						...main, 'page': 'home'
 						};
+				case 'aboutPage':
+						return{
+						...main, 'page': 'about'
+						};
 				case 'skillsPage':
 						return{
 						...main, 'page': 'skills'
-						};
-				case 'contactPage':
-						return{
-						...main, 'page': 'contact'
 						};
 				case 'projectsPage':
 						return{
 						...main, 'page': 'projects'
 						};
-				case 'aboutPage':
+				case 'contactPage':
 						return{
-						...main, 'page': 'about'
+						...main, 'page': 'contact'
 						};
 				default:
 						return main;

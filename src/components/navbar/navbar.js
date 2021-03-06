@@ -22,10 +22,10 @@ const Navbar = () => {
 
 		const knobClass = classNames({
 				'knob':true,
-				'knobSkills': main.page === 'skills' ? true : false,
-				'knobContact': main.page === 'contact' ? true : false,
-				'knobProjects': main.page === 'projects' ? true : false,
 				'knobAbout': main.page === 'about' ? true : false,
+				'knobProjects': main.page === 'projects' ? true : false,
+				'knobSkills': main.page === 'skills' ? true : false,
+				'knobContact': main.page === 'contact' ? true : false
 		});
 
 return(
@@ -35,14 +35,14 @@ return(
 				</div>
 				<div className='menu'>
 						<div className='menuTop'>
-								<NavLink className='about' activeClassName='activeLink' to='/about'>About</NavLink>
+								<NavLink className='contact' activeClassName='activeLink' to='/contact'>Contact</NavLink>
 								<NavLink exact className='off' activeClassName='activeLink' to='/'>Off</NavLink>
-								<NavLink className='skills' activeClassName='activeLink' to='/skills'>Skills</NavLink>
+								<NavLink className='about' activeClassName='activeLink' to='/about'>About</NavLink>
 						</div>
 						<div className={knobClass}><div className='knobMarker'/></div>
 						<div className='menuBottom'>
 								<NavLink className='projects' activeClassName='activeLink' to='/projects'>Projects</NavLink>
-								<NavLink className='contact' activeClassName='activeLink' to='/contact'>Contact</NavLink>
+								<NavLink className='skills' activeClassName='activeLink' to='/skills'>Skills</NavLink>
 						</div>
 				</div>
 				<div className='switches'>
