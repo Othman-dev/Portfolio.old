@@ -13,11 +13,13 @@ import Skills from '../pages/skills/skills.js';
 import Projects from '../pages/projects/projects.js';
 import Contact from '../pages/contact/contact.js';
 import Error from '../pages/error/error.js';
+import CursorAnim from '../components/cursorAnim/cursorAnim.js';
 
 const Layout = () => {
 
 return(
 		<div className='layout'>
+		<CursorAnim/>
 		<MainContextProvider>
 		<Router>
 				<div className='navbarContainer'>

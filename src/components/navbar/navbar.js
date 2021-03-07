@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { MainContext } from '../../context/mainContext.js';
 import classNames from 'classnames';
 import Logo from '../../assets/logo.png';
+import { FaMusic } from 'react-icons/fa';
 
 
 const Navbar = () => {
@@ -48,11 +49,15 @@ return(
 				<div className='switches'>
 						<div className={musicClass}/>
 						<button onClick={() => dispatch({type: 'musicSwitch'})}>
-								Music
+								<FaMusic className='faMusic'/>
 						</button>
 						<div className={frenchClass}/>
 						<button onClick={() => dispatch({type: 'frenchSwitch'})}>
-								Franc.
+								<div className='flag'>
+										<div className='flagBlue'/>
+										<div className='flagWhite'/>
+										<div className='flagRed'/>
+								</div>
 						</button>
 				</div>
 		</div>

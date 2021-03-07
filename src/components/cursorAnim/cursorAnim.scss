@@ -1,0 +1,22 @@
+@import '../../_default.scss';
+
+.cursorContainer {
+		position: absolute;
+		display: flex;
+		z-index: 20;
+		height: 170px;
+		width: 45px;
+		top: 50vh;
+		left: 30vw;
+		text-align: center;
+		color: $green-logo;
+}
+
+.cursorFilter {
+		z-index: 21;
+		position: absolute;
+		background: linear-gradient(#00000000, $primary 40%);	
+		height: 100%;
+		width: 100%;
+}
+

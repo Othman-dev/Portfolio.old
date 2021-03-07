@@ -6,7 +6,7 @@ const Loading = (props) => {
 		
 		const { title } = props;
 
-		const [done, setDone] = useState(true);
+		const [done, setDone] = useState(false);
 
 		useEffect(() => {
 				setDone(false);
@@ -14,7 +14,7 @@ const Loading = (props) => {
 						setDone(true)
 				}, 2000);
 				return () => clearTimeout(timer);	
-		},[])
+		},[]) 
 
 return(
 		<div>
