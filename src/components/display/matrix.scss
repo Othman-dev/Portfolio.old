@@ -1,0 +1,89 @@
+@import '../../_default.scss';
+
+.matrixContainer {
+		height: 100%;
+		width: 100%;
+		cursor: none;
+}
+
+.matrix {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		color: green;
+		background-color: black;
+		padding-left: $navbar-width;
+}
+
+.holeContainer {
+		position: absolute;
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		transform: translate( -50%,-50% );
+		overflow: hidden;
+}
+
+.holeCircle {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+		box-shadow:inset 0px 0px 0px 3px $primary;
+}
+
+.circle1 {
+		top: -49%;
+}
+
+.circle2 {
+		top: 49%;
+}
+
+.circle3 {
+		left: 85%;
+}
+
+.circle4 {
+		left: -85%;
+}
+
+.circle5 {
+		top: 73.5%;
+		left: 43.5%;
+}
+
+.circle6 {
+		top: -73.5%;
+		left: 41.5%;
+}
+
+.circle7 {
+		top: -73.5%;
+		left: -42.5%;
+}
+
+.circle8 {
+		top: 73.5%;
+		left: -43%;
+}
+
+.circle9 {
+		top: 24%;
+		left: 43%;
+}
+
+.circle10 {
+		top: -25%;
+		left: 43%;
+}
+
+.circle11 {
+		top: 24%;
+		left: -42%;
+}
+
+.circle12 {
+		top: -24%;
+		left: -43%;
+}
