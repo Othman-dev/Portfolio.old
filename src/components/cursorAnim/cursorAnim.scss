@@ -1,22 +1,21 @@
 @import '../../_default.scss';
 
 .cursorContainer {
-		position: absolute;
-		display: flex;
-		z-index: 20;
-		height: 170px;
-		width: 45px;
-		top: 50vh;
-		left: 30vw;
-		text-align: center;
-		color: $green-logo;
-}
-
-.cursorFilter {
-		z-index: 21;
-		position: absolute;
-		background: linear-gradient(#00000000, $primary 40%);	
+		background-color: $primary;
 		height: 100%;
 		width: 100%;
+		opacity: 80%;
 }
 
+.cursorBubble {
+		position: absolute;
+		display: flex;
+		point-events: none;
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		background-color: black;
+		transform: translate( -50%, -50%);
+		outline: solid;
+		backdrop-filter: opacity(10%);
+}
