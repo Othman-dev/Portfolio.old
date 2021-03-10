@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './matrix.scss';
 
 
@@ -10,6 +10,32 @@ const Matrix = () => {
 		})
 
 		useEffect(() => {
+				const canvas = canvasRef.current;
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+				const ctx = canvas.getContext('2d');
+				const fontSize = 15;
+				const columns = canvas.width / fontSize;
+				const drops = [];
+				for(let y = 0; y < columns ; y++){
+						drops[y] = canvas.height;
+				}
+				function draw() {
+						ctx.fillStyle = '#0001';
+						ctx.fillRect(0, 0, canvas.width, canvas.height);
+						ctx.fillStyle = '#0F0';
+						ctx.font = fontSize + 'px';
+						for(let i=0; i < columns; i++){
+								const text = Math.floor(Math.random()*2)
+								ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+								if(drops[i]*fontSize > canvas.height && Math.random() >0.99){
+										drops[i] = 0;
+								}
+								drops[i]++;
+						}
+				};
+				setInterval(draw, 25);	
+
 				window.addEventListener('mousemove', mousePointer)
 				function mousePointer(e) {
 						pointer.style = setPointer({
@@ -18,6 +44,12 @@ const Matrix = () => {
 						})
 				}
 		},[])
+
+		// matrix effect on background
+
+		const canvasRef = useRef(null);
+
+		// Logo on top that goes on top of clipPath
 
 		const matrixHole = (
 						
@@ -41,10 +73,8 @@ const Matrix = () => {
 
 return(
 		<div className='matrixContainer'>
-				<div className='matrix'
-				style={{'clipPath': `circle(49px at ${pointer.x}px  ${pointer.y}px)`}}> 
-					testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-				</div>
+				<canvas ref={canvasRef}
+				style={{'clipPath': `circle(98px at ${pointer.x}px  ${pointer.y}px)`}}/>
 				{matrixHole}
 		</div>
 )};

@@ -17,11 +17,18 @@
 
 .holeContainer {
 		position: absolute;
-		height: 100px;
-		width: 100px;
+		height: 200px;
+		width: 200px;
 		border-radius: 50%;
 		transform: translate( -50%,-50% );
 		overflow: hidden;
+		box-shadow:inset 0px 0px 1px 6px $primary;
+		animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate{
+		0%{transform: translate( -50%,-50% ) rotate(0deg)}
+		100%{transform: translate( -50%,-50% ) rotate(360deg)}
 }
 
 .holeCircle {
@@ -29,7 +36,7 @@
 		height: 100%;
 		width: 100%;
 		border-radius: 50%;
-		box-shadow:inset 0px 0px 0px 3px $primary;
+		box-shadow:inset 0px 0px 1px 6px $primary;
 }
 
 .circle1 {
