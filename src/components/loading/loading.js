@@ -6,7 +6,7 @@ const Loading = (props) => {
 		
 		const { title } = props;
 
-		const [done, setDone] = useState(false);
+		const [done, setDone] = useState(true);
 
 		useEffect(() => {
 				setDone(false);

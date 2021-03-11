@@ -1,34 +1,26 @@
 @import '../../_default.scss';
 
 .matrixContainer {
-		height: 100%;
-		width: 100%;
-		cursor: none;
-}
-
-.matrix {
 		position: absolute;
-		height: 100%;
-		width: 100%;
-		color: green;
-		background-color: black;
-		padding-left: $navbar-width;
+		height: 100vh;
+		width: 100vw;
+		background-color: $primary;
+		cursor: none;
 }
 
 .holeContainer {
 		position: absolute;
-		height: 200px;
-		width: 200px;
+		height: 20vh;
+		width: 20vh;
 		border-radius: 50%;
-		transform: translate( -50%,-50% );
 		overflow: hidden;
-		box-shadow:inset 0px 0px 1px 6px $primary;
+		box-shadow: 0px 0px .2vh 1vh $primary;
 		animation: rotate 10s linear infinite;
 }
 
 @keyframes rotate{
 		0%{transform: translate( -50%,-50% ) rotate(0deg)}
-		100%{transform: translate( -50%,-50% ) rotate(360deg)}
+		100%{transform: translate( -50%,-50% ) rotate(-360deg)}
 }
 
 .holeCircle {
@@ -36,7 +28,7 @@
 		height: 100%;
 		width: 100%;
 		border-radius: 50%;
-		box-shadow:inset 0px 0px 1px 6px $primary;
+		box-shadow:inset 0px 0px .2vh .6vh $primary;
 }
 
 .circle1 {
@@ -48,49 +40,49 @@
 }
 
 .circle3 {
-		left: 85%;
+		left: 86%;
 }
 
 .circle4 {
-		left: -85%;
+		left: -86%;
 }
 
 .circle5 {
-		top: 73.5%;
-		left: 43.5%;
+		top: 74.5%;
+		left: 42.5%;
 }
 
 .circle6 {
-		top: -73.5%;
-		left: 41.5%;
+		top: -74.5%;
+		left: 42.5%;
 }
 
 .circle7 {
-		top: -73.5%;
+		top: -74.5%;
 		left: -42.5%;
 }
 
 .circle8 {
-		top: 73.5%;
-		left: -43%;
+		top: 74.5%;
+		left: -42.5%;
 }
 
 .circle9 {
 		top: 24%;
-		left: 43%;
+		left: 42.5%;
 }
 
 .circle10 {
-		top: -25%;
-		left: 43%;
+		top: -24%;
+		left: 42.5%;
 }
 
 .circle11 {
 		top: 24%;
-		left: -42%;
+		left: -42.5%;
 }
 
 .circle12 {
 		top: -24%;
-		left: -43%;
+		left: -42.5%;
 }

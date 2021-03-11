@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import GridDisplay from '../../components/display/gridDisplay.js';
+import GridPage from '../../components/layoutPage/gridPage.js';
 import Loading from '../../components/loading/loading.js';
 import { MainContext } from '../../context/mainContext.js';
 
@@ -14,7 +14,7 @@ const Projects = () => {
 return (
 		<div>
 				<Loading title='Projects'/>
-				<GridDisplay/>
+				<GridPage/>
 		</div>
 )};
 

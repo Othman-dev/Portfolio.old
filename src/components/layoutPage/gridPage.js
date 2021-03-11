@@ -1,10 +1,10 @@
 import React from 'react';
-import './display.scss';
+import './layoutPage.scss';
 
-const GridDisplay = (props) => {
+const gridPage = (props) => {
 
 return(
-		<div className='displayGrid'>
+		<div className='gridPage'>
 				<div className='gridBox'>1</div>		
 				<div className='gridBox'>2</div>		
 				<div className='gridBox'>3</div>		
@@ -12,4 +12,4 @@ return(
 		</div>
 )};
 
-export default GridDisplay;
+export default gridPage;

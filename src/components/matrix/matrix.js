@@ -9,22 +9,27 @@ const Matrix = () => {
 				y:0
 		})
 
+		// matrix effect on background
+
+		const canvasRef = useRef(null);
+
 		useEffect(() => {
 				const canvas = canvasRef.current;
 				canvas.width = window.innerWidth;
 				canvas.height = window.innerHeight;
 				const ctx = canvas.getContext('2d');
-				const fontSize = 15;
+				const fontSize = window.innerHeight / 70;
 				const columns = canvas.width / fontSize;
 				const drops = [];
 				for(let y = 0; y < columns ; y++){
 						drops[y] = canvas.height;
 				}
-				function draw() {
+				setInterval( () => {
 						ctx.fillStyle = '#0001';
 						ctx.fillRect(0, 0, canvas.width, canvas.height);
 						ctx.fillStyle = '#0F0';
-						ctx.font = fontSize + 'px';
+						ctx.font = fontSize + 'px sans-sherif';
+						console.log(ctx.fontSize);
 						for(let i=0; i < columns; i++){
 								const text = Math.floor(Math.random()*2)
 								ctx.fillText(text, i*fontSize, drops[i]*fontSize);
@@ -33,8 +38,7 @@ const Matrix = () => {
 								}
 								drops[i]++;
 						}
-				};
-				setInterval(draw, 25);	
+				}, 25);
 
 				window.addEventListener('mousemove', mousePointer)
 				function mousePointer(e) {
@@ -44,10 +48,6 @@ const Matrix = () => {
 						})
 				}
 		},[])
-
-		// matrix effect on background
-
-		const canvasRef = useRef(null);
 
 		// Logo on top that goes on top of clipPath
 
@@ -74,7 +74,7 @@ const Matrix = () => {
 return(
 		<div className='matrixContainer'>
 				<canvas ref={canvasRef}
-				style={{'clipPath': `circle(98px at ${pointer.x}px  ${pointer.y}px)`}}/>
+				style={{'clipPath': `circle(10vh at ${pointer.x}px  ${pointer.y}px)`}}/>
 				{matrixHole}
 		</div>
 )};

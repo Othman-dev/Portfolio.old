@@ -1,10 +1,10 @@
 import React from 'react';
-import './display.scss';
+import './layoutPage.scss';
 
-const DuoDisplay = (props) => {
+const DuoPage = (props) => {
 
 return(
-		<div className='displayDuo'>
+		<div className='duoPage'>
 				<div className='leftSide'>
 						leftside
 				</div>
@@ -14,4 +14,4 @@ return(
 		</div>
 )};
 
-export default DuoDisplay;
+export default DuoPage;

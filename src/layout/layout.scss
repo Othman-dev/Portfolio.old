@@ -7,16 +7,16 @@
 }
 
 .navbarContainer {
-		z-index: 10;
+		z-index: 5;
 		height: 100vh;
-		width: $navbar-width;
+		width: 15vw;
 		float: left;
 		box-shadow: 0px 2px 4px 2px; 
 }
 
 .pageContainer {
-		z-index:5;
-		position: absolute;
+		z-index: 2;
 		height: 100%;
-		width: 100vw;
+		width: 85vw;
+		float: right;
 }

@@ -7,7 +7,11 @@
 		flex-direction: column;
 		align-items: center;
 		font-weight: bold;
-		background-image: url('../../assets/wood.jpg');
+		overflow: hidden;
+}
+
+.imageBg {
+		height:100vh;			
 }
 
 /*-----     LOGO     -----*/
@@ -15,8 +19,8 @@
 .logoContainer {
 		position: absolute;
 		top: 2%;
-		height: 200px;
-		width: 200px;
+		height: 20vh;
+		width: 20vh;
 }
 
 .logo {
@@ -24,7 +28,7 @@
 		width: 100%;
 		border-radius: 60%;
 		background-color: $primary;
-		box-shadow: 0px 0px 3px 5px $primary;
+		box-shadow: 0px 0px .3vh 5px $primary;
 }
 
 /*-----     MENU     -----*/
@@ -43,20 +47,20 @@
 
 				.contact {
 						position: relative;
-						transform: translate( -47px,40px );
+						transform: translate( -100%,200% );
 						text-decoration: none;
 						color: black;
 				}
 
 				.off {
-						transform: translate( -4px , 5px );
+						transform: translate( -25% , 0% );
 						text-decoration: none;
 						color: black;
 				}
 
 				.about {
 						position: relative;
-						transform: translate( 40px,40px );
+						transform: translate( 95%,200% );
 						text-decoration: none;
 						color: black;
 				}
@@ -67,20 +71,20 @@
 		}
 
 		.knob{
-				height: 120px;
-				width: 120px;
+				height: 13vh;
+				width: 13vh;
 				border-radius: 50%;
 				background-color: $light-gray;
-				box-shadow: 0px 0px 5px 3px;
+				box-shadow: 0px 0px .5vh .3vh;
 				margin: 10px;
 				transition: all 1s;
 
 				.knobMarker {
 						background-color: $primary;
-						height: 40px;
-						width: 8px;
-						border-radius: 30% 30% 20% 20%;
-						transform: translate( 57px, -0.5px );
+						height: 4vh;
+						width: 1vh;
+						border-radius: 40% 40% 10% 10%;
+						transform: translate( 6vh, 0vh );
 				}		
 		}
 		.knobAbout {
@@ -102,14 +106,14 @@
 
 				.skills {
 						position: relative;
-						transform: translate( 40px,-40px );
+						transform: translate( 120%,-200% );
 						text-decoration: none;
 						color: black;
 				}
 
 				.projects {
 						position: relative;
-						transform: translate( -55px,-40px );
+						transform: translate( -110%,-200% );
 						text-decoration: none;
 						color: black;
 				}
@@ -131,8 +135,8 @@
 		
 		.lightOff {
 				background-color: black;
-				height: 10px;
-				width: 10px;
+				height: 1vh;
+				width: 1vh;
 				border-radius: 50%;
 				box-shadow: 0px 0px 5px 2px;
 				transform: translate(450%,-150%);
@@ -146,20 +150,21 @@
 				background-color: $light-gray;
 				border-radius: 25%;
 				box-shadow: 0px 0px 4px 3px black;
-				width: 60px;
-				margin: 10px;
-				padding: 10px;
+				height: 5vh;
+				width: 6vh;
+				margin: 1vh;
+				padding: 1vh;
 
 				.faMusic {
-						height: 20px;
-						width: 20px;
+						height: 2.3vh;
+						width: 2.3vh;
 						color: $primary;
 				}
 
 				.flag {
 						position: relative;
-						height: 20px;
-						width: 21px;
+						height: 2.3vh;
+						width: 2.3vh;
 						display: flex;
 						left: 20%;
 						flex-direction: row;
@@ -167,18 +172,18 @@
 						.flagBlue{
 								background-color: blue;
 								height: 100%;
-								width: 7px;
+								width: .8vh;
 								border-radius: 20% 0% 0% 20%;
 						}
 						.flagWhite{
 								background-color: white;
 								height: 100%;
-								width: 7px;
+								width: .7vh;
 						}
 						.flagRed{
 								background-color: red;
 								height: 100%;
-								width: 7px;
+								width: .8vh;
 								border-radius: 0% 20% 20% 0%;
 						}
 				}

@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { MainContext } from '../../context/mainContext.js';
 import classNames from 'classnames';
 import Logo from '../../assets/logo.png';
+import Wood from '../../assets/wood.jpg';
 import { FaMusic } from 'react-icons/fa';
 
 
@@ -31,6 +32,7 @@ const Navbar = () => {
 
 return(
 		<div className='navbar'>
+				<img className='imageBg' src={Wood} alt='wood'/>
 				<div className='logoContainer'>
 						<NavLink to='/'><img src={Logo} alt='Logo' className='logo'/></NavLink>
 				</div>
