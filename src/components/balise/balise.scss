@@ -1,0 +1,42 @@
+@import '../../_default.scss';
+
+.baliseLayout {
+		position: absolute;
+		height: 100vh;
+		width: 100%;
+		color: #557080;
+		font-size: 2.5vh;
+		font-family: 'Caveat', cursive;
+}
+
+.balise {
+		position: absolute;
+		left: 6vh;
+		color: #557080;
+		font-size: 2.5vh;
+		font-family: 'Caveat', cursive;
+}
+
+.topHtml {
+		position: absolute;
+		top: 1vh;
+		left: 2vw;
+}
+
+.bottomHtml {
+		position: absolute;
+		bottom: 2vh;
+		left: 2vw;
+}
+
+.topBody {
+		position: absolute;
+		top: 4vh;
+		left: 4vw;
+}
+
+.bottomBody {
+		position: absolute;
+		bottom: 5vh;
+		left: 4vw;
+}

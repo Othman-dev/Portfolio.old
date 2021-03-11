@@ -33,12 +33,12 @@ const Matrix = () => {
 						for(let i=0; i < columns; i++){
 								const text = Math.floor(Math.random()*2)
 								ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-								if(drops[i]*fontSize > canvas.height && Math.random() >0.99){
+								if(drops[i]*fontSize > canvas.height && Math.random() > 0.99){
 										drops[i] = 0;
 								}
 								drops[i]++;
 						}
-				}, 25);
+				}, 50);
 
 				window.addEventListener('mousemove', mousePointer)
 				function mousePointer(e) {
