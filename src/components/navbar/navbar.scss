@@ -79,6 +79,15 @@
 				margin: 10px;
 				transition: all 1s;
 
+				.knobEffect {
+						position: absolute;
+						box-shadow:inset 0px 0px .5vh .2vh #EEE;
+						height: 13vh;
+						width: 13vh;
+						border-radius: 50%;
+
+				}
+
 				.knobMarker {
 						background-color: $primary;
 						height: 4vh;
@@ -138,8 +147,8 @@
 				height: 1vh;
 				width: 1vh;
 				border-radius: 50%;
-				box-shadow: 0px 0px 5px 2px;
-				transform: translate(450%,-150%);
+				box-shadow: 0px 0px .5vh .2vh;
+				transform: translate(660%,-200%);
 		}
 		.lightOn {
 				background-color: $active-light;
@@ -149,10 +158,11 @@
 		button {
 				background-color: $light-gray;
 				border-radius: 25%;
-				box-shadow: 0px 0px 4px 3px black;
+				box-shadow: 0px 0px .4vh .3vh black;
 				height: 5vh;
 				width: 6vh;
-				margin: 1vh;
+				margin: 3vh;
+				margin-top: 2vh;
 				padding: 1vh;
 
 				.faMusic {

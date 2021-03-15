@@ -1,5 +1,8 @@
+@import './_default.scss';
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,6 +10,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   font-size: 1.5vh;
+  
+  h1{
+		max-width: 35vw;
+		color: $green-logo;
+		font-size: 9vh;
+		padding: 0;
+		margin: 0;
+		border-radius: 2.5% / 40%;
+  }
+
+  p{
+		max-width: 35vw;
+		color: white;
+		font-size: 2.4vh;
+		padding:0;
+		margin:0;
+		border-radius: 2.5% / 40%;
+  }
 }
 
 code {

@@ -23,12 +23,20 @@
 		100%{transform: translate( -50%,-50% ) rotate(-360deg)}
 }
 
+.holeEffect {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+		box-shadow:inset 0px 0px .4vh .6vh $primary;
+}
+
 .holeCircle {
 		position: absolute;
 		height: 100%;
 		width: 100%;
 		border-radius: 50%;
-		box-shadow:inset 0px 0px .2vh .6vh $primary;
+		box-shadow:inset 0px 0px .4vh .6vh $primary;
 }
 
 .circle1 {

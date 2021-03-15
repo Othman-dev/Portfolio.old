@@ -1,10 +1,42 @@
+@import '../../_default.scss';
+
 .homeContainer {
-		position: absolute;
 		height: 100%;
 		width:100%;
 }
 
 .homeTitle {
-		position: absolute;
-		top: 10vh;
+		position: relative;
+		height: 13vh;
+		width:auto;
+		top: 25vh;
+		left: 5vw;
+		
+		h1 {
+				position: relative;
+				left: 2vw;
+				background-color: $primary-text;
+				color: #FFF;
+		}
+
+		.nameColor {
+				display: inline;
+				color: $green-logo;
+		}
+}
+
+.homeContent {
+		position: relative;
+		height: 5vh;
+		width:auto;
+		top: 51vh;
+		left: 5vw;
+		
+		p {
+				font-weight: 500;
+				position: relative;
+				left: 5vw;
+				background-color: $primary-text;
+				color: #777;
+		}
 }

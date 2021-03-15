@@ -17,7 +17,18 @@ return (
 		<div className='homeContainer'>
 				<Loading/>
 				<BaliseLayout/>
-				<BaliseOn content='h1' className='homeTitle'/>
+				<div className='homeTitle'>
+						<BaliseOn content='h1'/>
+						<h1>Hello world,</h1>
+						<h1>I am <div className='nameColor'>Othman</div>,</h1>
+						<h1>web developer.</h1>
+						<BaliseOff content='h1'/>
+				</div>
+				<div className='homeContent'>
+						<BaliseOn content='p'/>
+						<p>Fullstack / MERN developer</p>
+						<BaliseOff content='p'/>
+				</div>
 		</div>
 )};
 

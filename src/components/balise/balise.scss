@@ -1,19 +1,14 @@
 @import '../../_default.scss';
 
+/*-----     BALISELAYOUT     -----*/
+
 .baliseLayout {
 		position: absolute;
 		height: 100vh;
-		width: 100%;
-		color: #557080;
-		font-size: 2.5vh;
-		font-family: 'Caveat', cursive;
-}
-
-.balise {
-		position: absolute;
-		left: 6vh;
-		color: #557080;
-		font-size: 2.5vh;
+		width: 8vw;
+		color: white;
+		opacity: 30%;
+		font-size: 2vh;
 		font-family: 'Caveat', cursive;
 }
 
@@ -32,11 +27,21 @@
 .topBody {
 		position: absolute;
 		top: 4vh;
-		left: 4vw;
+		left: 3vw;
 }
 
 .bottomBody {
 		position: absolute;
 		bottom: 5vh;
-		left: 4vw;
+		left: 3vw;
+}
+
+
+/*-----     BALISE     -----*/
+
+.balise {
+		color: white;
+		opacity: 30%;
+		font-size: 2vh;
+		font-family: 'Caveat', cursive;
 }

@@ -42,7 +42,10 @@ return(
 								<NavLink exact className='off' activeClassName='activeLink' to='/'>Off</NavLink>
 								<NavLink className='about' activeClassName='activeLink' to='/about'>About</NavLink>
 						</div>
-						<div className={knobClass}><div className='knobMarker'/></div>
+						<div className={knobClass}>
+								<div className='knobEffect'/>
+								<div className='knobMarker'/>
+						</div>
 						<div className='menuBottom'>
 								<NavLink className='projects' activeClassName='activeLink' to='/projects'>Projects</NavLink>
 								<NavLink className='skills' activeClassName='activeLink' to='/skills'>Skills</NavLink>

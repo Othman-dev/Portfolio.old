@@ -55,6 +55,7 @@ const Matrix = () => {
 						
 				<div className='holeContainer'
 				style={{'top': `${pointer.y}px`, 'left':`${pointer.x}px`}}> 
+						<div className='holeEffect'/>
 						<div className='holeCircle circle1'/>				
 						<div className='holeCircle circle2'/>				
 						<div className='holeCircle circle3'/>				
