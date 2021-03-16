@@ -1,3 +1,5 @@
+@import '../../_default.scss';
+
 /*-----     DUO     -----*/
 
 .duoPage {
@@ -19,11 +21,41 @@
 				left: 5vw;
 				height: fit-content;
 				width: 100%;
-				h1, p {
+				h1, p, form {
 						position: relative;
 						left: 1vw;
 				}
 		}
+}
+
+
+.formInput {
+		background-color: $primary-text;
+		color: white;
+		border-radius: 4% / 30%;
+		border: solid 1px #FFFFFF30;
+		font-size: 2vh;
+}
+
+.formMessage{
+		background-color: $primary-text;
+		color: white;
+		min-height: 20vh;
+		min-width: 30vw;
+		border-radius: 2% / 4%;
+		border: solid 1px #FFFFFF30;
+		font-size: 2vh;
+
+}
+
+.formButton {
+		background-color: $primary-text;
+		color: $green-logo;
+		height: 5vh;
+		width: 5vw;
+		border-radius: 8% / 15%;
+		border: solid 1px #FFFFFF30;
+		font-size: 2.5vh;
 }
 
 .rightSide {

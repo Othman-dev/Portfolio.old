@@ -29,7 +29,6 @@ const Matrix = () => {
 						ctx.fillRect(0, 0, canvas.width, canvas.height);
 						ctx.fillStyle = '#0F0';
 						ctx.font = fontSize + 'px sans-sherif';
-						console.log(ctx.fontSize);
 						for(let i=0; i < columns; i++){
 								const text = Math.floor(Math.random()*2)
 								ctx.fillText(text, i*fontSize, drops[i]*fontSize);
@@ -49,7 +48,7 @@ const Matrix = () => {
 				}
 		},[])
 
-		// Logo on top that goes on top of clipPath
+		// Logo that goes on top of clipPath
 
 		const matrixHole = (
 						

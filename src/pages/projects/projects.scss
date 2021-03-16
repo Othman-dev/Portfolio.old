@@ -30,19 +30,19 @@
 }
 
 .clip1 {
-		background: green;
+		background: url(../../assets/1.jpg);
 		background-size: cover;
 		clip-path: polygon(0 0, 40% 0, 20% 100%, 0% 100%);
 }
 
 .clip2 {
-		background: yellow;
+		background: url(../../assets/2.jpg);
 		background-size: cover;
 		clip-path: polygon(40% 0, 80% 0, 60% 100%, 20% 100%);
 }
 
 .clip3 {
-		background: red;
+		background: url(../../assets/3.jpg);
 		background-size: cover;
 		clip-path: polygon(80% 0, 100% 0, 100% 100%, 60% 100%);
 }
