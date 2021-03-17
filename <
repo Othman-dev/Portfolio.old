@@ -1,9 +1,0 @@
-@import '../../_default.scss';
-
-.header {
-		background-color: $primary;
-		top: -10px;
-		height: 150px;
-		width: 100%;
-		text-align: center;
-}

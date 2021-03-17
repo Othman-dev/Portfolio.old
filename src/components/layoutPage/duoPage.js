@@ -20,33 +20,34 @@ const DuoPage = (props) => {
 
 		//-----      Contact Page      -----//
 		
+		const [message, setMessage] = useState({})
+
 		function handleSend(e) {
 				e.preventDefault();
-
-				emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+				emailjs.send('service_workmail', 'template_portfolio', message, process.env.REACT_APP_EMAIL_KEY)
 				.then((result) => {
 						console.log(result.text);
 				}, (error) => {
 						console.log(error.text);
-				});
+				}); 
 		}
 
 		function handleChange(e) {
 				e.preventDefault();
-				console.log(e.target, e.target.name, e.target.value);
+				setMessage({...message, [e.target.name]: e.target.value});
 		}
 
 		const contactForm = (
 				<div className='leftBlock'>
 						<BaliseOn content='form'/>
 						<form onSubmit={handleSend}>
-								<input className='formInput' name='name' placeHolder='Name' type='text' onChange={handleChange} required/>
+								<input className='formInput' name='name' placeholder='Name' type='text' onChange={handleChange} required/>
 								<br/>
-								<input className='formInput' name='email' placeHolder='Email' type='email' onChange={handleChange} required/>
+								<input className='formInput' name='email' placeholder='Email' type='email' onChange={handleChange} required/>
 								<br/>
-								<input className='formInput' name='subject' placeHolder='Subject' type='text' onChange={handleChange} required/>
+								<input className='formInput' name='subject' placeholder='Subject' type='text' onChange={handleChange} required/>
 								<br/>
-								<textarea className='formMessage' name='message' placeHolder='Message...' type='text' onChange={handleChange} required/>
+								<textarea className='formMessage' name='message' placeholder='Message...' type='text' onChange={handleChange} required/>
 								<br/>
 								<input className='formButton' type='submit' value='send'/>
 						</form>
