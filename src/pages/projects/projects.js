@@ -17,7 +17,7 @@ return (
 		<div className='projectsContainer'>
 				<Loading/>
 				<BaliseLayout/>
-				<BaliseOn content='link'/> 
+				<BaliseOn content='link' className='projectsBaliseOn'/> 
 				<div className='clipContainer'>
 						<div className='clip clip1'>
 								<button className='buttonL'><FaGithub className='clipLogo'/></button>
@@ -41,7 +41,7 @@ return (
 								<button className='buttonR'><FaLink className='clipLogo'/></button>
 						</div>
 				</div>
-				<BaliseOff content='link'/> 
+				<BaliseOff content='link' className='projectsBaliseOff' /> 
 		</div>
 )};
 
