@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import './projects.scss';
 import Loading from '../../components/loading/loading.js';
+import BaliseLayout, { BaliseOn, BaliseOff } from'../../components/balise/balise.js';
 import { MainContext } from '../../context/mainContext.js';
 import { FaGithub, FaLink } from 'react-icons/fa';
 
@@ -14,7 +15,9 @@ const Projects = () => {
 
 return (
 		<div className='projectsContainer'>
-				<Loading title='Projects'/>
+				<Loading/>
+				<BaliseLayout/>
+				<BaliseOn content='link'/> 
 				<div className='clipContainer'>
 						<div className='clip clip1'>
 								<button className='buttonL'><FaGithub className='clipLogo'/></button>
@@ -38,6 +41,7 @@ return (
 								<button className='buttonR'><FaLink className='clipLogo'/></button>
 						</div>
 				</div>
+				<BaliseOff content='link'/> 
 		</div>
 )};
 
