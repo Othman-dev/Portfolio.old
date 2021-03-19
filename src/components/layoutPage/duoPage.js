@@ -4,6 +4,7 @@ import Balise, { BaliseOn, BaliseOff } from '../balise/balise.js';
 import { MainContext } from '../../context/mainContext.js';
 import  { AboutDb, SkillsDb, ContactDb } from '../../database/database.js';
 import emailjs from 'emailjs-com';
+import ContactMap  from './contactMap.js';
 
 
 const DuoPage = (props) => {
@@ -42,10 +43,9 @@ const DuoPage = (props) => {
 						<BaliseOn content='form'/>
 						<form onSubmit={handleSend}>
 								<input className='formInput' name='name' placeholder='Name' type='text' onChange={handleChange} required/>
-								<br/>
 								<input className='formInput' name='email' placeholder='Email' type='email' onChange={handleChange} required/>
 								<br/>
-								<input className='formInput' name='subject' placeholder='Subject' type='text' onChange={handleChange} required/>
+								<input className='formInput formSubject' name='subject' placeholder='Subject' type='text' onChange={handleChange} required/>
 								<br/>
 								<textarea className='formMessage' name='message' placeholder='Message...' type='text' onChange={handleChange} required/>
 								<br/>
@@ -54,6 +54,18 @@ const DuoPage = (props) => {
 						<BaliseOff content='form'/>
 				</div>
 		)  
+		
+		const contactMap = (
+				<div className='rightBlock contactMapContainer'>
+						<p className='infoMap'>
+								Othman Abboud<br/>
+								Ynystawe, Swansea, Wales.<br/>
+								<br/>
+								<span>@</span> : othman@workmail.com
+						</p>
+						<ContactMap/>
+				</div>
+		)
 		
 return(
 		<div className='duoPage'>
@@ -72,7 +84,7 @@ return(
 						{main.page === 'contact' && contactForm}
 				</div>
 				<div className='rightSide'>
-						rightside
+						{main.page === 'contact' && contactMap}
 				</div>
 		</div>
 )};

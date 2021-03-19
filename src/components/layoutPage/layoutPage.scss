@@ -1,12 +1,12 @@
 @import '../../_default.scss';
 
-/*-----     DUO     -----*/
-
 .duoPage {
 		display: flex;
 		flex-direction: row;
 		height: 100vh;
 }
+
+//-----     LEFT SIDE     -----//
 
 .leftSide {
 		height: 100%;
@@ -35,6 +35,13 @@
 		border-radius: 4% / 30%;
 		border: solid 1px #FFFFFF30;
 		font-size: 2vh;
+		height: 4vh;
+		width: 14.9vw;
+}
+		
+.formSubject{
+		width: 30vw;	
+		border-radius: 2% / 30%;
 }
 
 .formMessage{
@@ -49,14 +56,19 @@
 }
 
 .formButton {
+		position: relative;
 		background-color: $primary-text;
 		color: $green-logo;
 		height: 5vh;
 		width: 5vw;
+		left: 25.35vw;
 		border-radius: 8% / 15%;
 		border: solid 1px #FFFFFF30;
 		font-size: 2.5vh;
 }
+
+
+//-----     LEFT SIDE     -----//
 
 .rightSide {
 		height: 100%;
@@ -64,23 +76,29 @@
 		float: right;
 		text-align: center;
 		outline: solid;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 }
 
+.infoMap {
+		position: absolute;
+		text-align: left;
+		top: 4vh;
+		left: 2vw;
+		z-index:3;
 
-/*-----     GRID     -----*/
-
-.gridPage{
-		padding-left: 100px;
-		display: grid;
-		grid-template-columns: auto auto;
-		grid-gap: 90px;
+		span {
+				color: $green-logo;
+		}
 }
 
-.gridBox{
-		height: 35vh;
-		width: 35vw;
-		outline: solid;
-		background-color: yellow;
-		opacity: 50%;
-		text-align: center;
+.contactMapContainer {
+		position: absolute;
+		height: 100vh;
+		width: 40vw;
+		right: 0;
+		z-index:2;
 }
+
