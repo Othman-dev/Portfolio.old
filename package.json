@@ -4,16 +4,22 @@
   "description": "othman-dev portfolio",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "server": "nodemon server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Othman-dev/Portfolio.git"
-  },
+  "repository": "git+https://github.com/Othman-dev/Portfolio.git",
   "author": "Othman-dev",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Othman-dev/Portfolio/issues"
   },
-  "homepage": "https://github.com/Othman-dev/Portfolio#readme"
+  "homepage": "https://github.com/Othman-dev/Portfolio#readme",
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
