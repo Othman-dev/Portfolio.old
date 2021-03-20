@@ -1,0 +1,104 @@
+@import '../../_default.scss';
+
+.duoPage {
+		display: flex;
+		flex-direction: row;
+		height: 100vh;
+}
+
+//-----     LEFT SIDE     -----//
+
+.leftSide {
+		height: 100%;
+		width: 50%;
+		float: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	
+		.leftBlock {
+				position: relative;
+				left: 5vw;
+				height: fit-content;
+				width: 100%;
+				h1, p, form {
+						position: relative;
+						left: 1vw;
+				}
+		}
+}
+
+
+.formInput {
+		background-color: $primary-text;
+		color: white;
+		border-radius: 4% / 30%;
+		border: solid 1px #FFFFFF30;
+		font-size: 2vh;
+		height: 4vh;
+		width: 14.9vw;
+}
+		
+.formSubject{
+		width: 30vw;	
+		border-radius: 2% / 30%;
+}
+
+.formMessage{
+		background-color: $primary-text;
+		color: white;
+		min-height: 20vh;
+		min-width: 30vw;
+		border-radius: 2% / 4%;
+		border: solid 1px #FFFFFF30;
+		font-size: 2vh;
+
+}
+
+.formButton {
+		position: relative;
+		background-color: $primary-text;
+		color: $green-logo;
+		height: 5vh;
+		width: 5vw;
+		left: 25.3vw;
+		border-radius: 8% / 15%;
+		border: solid 1px #FFFFFF30;
+		font-size: 2.5vh;
+}
+
+
+//-----     LEFT SIDE     -----//
+
+.rightSide {
+		height: 100%;
+		width: 50%;
+		float: right;
+		text-align: center;
+		outline: solid;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+}
+
+.infoMap {
+		position: absolute;
+		text-align: left;
+		top: 4vh;
+		left: 2vw;
+		z-index:3;
+
+		span {
+				color: $green-logo;
+		}
+}
+
+.contactMapContainer {
+		position: absolute;
+		height: 100vh;
+		width: 40vw;
+		right: 0;
+		z-index:2;
+}
+
