@@ -1,9 +1,11 @@
 @import '../../_default.scss';
 
 .duoPage {
+		position: absolute;
 		display: flex;
 		flex-direction: row;
 		height: 100vh;
+		width: 85vw;
 }
 
 //-----     LEFT SIDE     -----//
@@ -68,14 +70,13 @@
 }
 
 
-//-----     LEFT SIDE     -----//
+//-----     RIGHT SIDE     -----//
 
 .rightSide {
 		height: 100%;
 		width: 50%;
 		float: right;
 		text-align: center;
-		outline: solid;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -92,6 +93,104 @@
 		span {
 				color: $green-logo;
 		}
+}
+
+.aboutContainer{
+		height: 70%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: space-around;
+		align-content: center;
+		
+		.aboutLinksOdd{
+				position: relative;
+				left: 5vw;
+				height: 10vh;
+				width: 15vw;
+				border-radius: 20% 0% 0% 20% / 30%;
+				background-image: linear-gradient(to right, #FFF, #FFFFFF40, #00000000);
+				animation: leftToRight 4s ease-in;
+		}
+		.aboutLinksEven{
+				position: relative;
+				left: 22vw;
+				height: 10vh;
+				width: 15vw;
+				border-radius: 0% 20% 20% 0% / 30%;
+				background-image: linear-gradient(to left, #FFF, #FFFFFF40, #00000000);
+				animation: rightToLeft 4s ease-in;
+		}
+}
+
+@keyframes leftToRight {
+		0%{ opacity:0; transform: translateX(-50px); };
+		40%{ opacity:0; transform: translateX(-50px); };
+		100%{ opacity:1; transform: translateX(0); };
+}
+
+@keyframes rightToLeft {
+		0%{ opacity:0; transform: translateX(50px); };
+		40%{ opacity:0; transform: translateX(50px); };
+		100%{ opacity:1; transform: translateX(0); };
+}
+
+.skillsContainer{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		
+		.circleTop{
+				position: absolute;
+				z-index: 3;
+				height: 50vh;
+				width: 50vh;
+				border-radius: 50%;
+				border: solid white;
+				transform: translateY(-30%);
+				animation: appearTop 4s ease-in;
+		}
+		.circleRight{
+				position: absolute;
+				z-index: 4;
+				height: 50vh;
+				width: 50vh;
+				border-radius: 50%;
+				border: solid white;
+				transform: translate( 35%,35% );
+				animation: appearRight 4s ease-in;
+		}
+		.circleLeft{
+				position: absolute;
+				z-index: 5;
+				height: 50vh;
+				width: 50vh;
+				border-radius: 50%;
+				border: solid white;
+				transform: translate( -35%,35% );
+				animation: appearLeft 4s ease-in;
+		}
+}
+
+@keyframes appearTop{
+		0% {opacity: 0; transform: translateY(-60%)}
+		40% {opacity: 0; transform: translateY(-60%)}
+		100% {opacity: 1; transform: translateY(-30%)}
+}
+
+@keyframes appearLeft{
+		0% {opacity: 0; transform: translate(-65%,65%)}
+		40% {opacity: 0; transform: translate(-65%,65%)}
+		100% {opacity: 1; transform: translate(-35%,35%)}
+}
+
+@keyframes appearRight{
+		0% {opacity: 0; transform: translate( 65%,65%)}
+		40% {opacity: 0; transform: translate( 65%,65%)}
+		100% {opacity: 1; transform: translate( 35%,35%)}
 }
 
 .contactMapContainer {

@@ -19,8 +19,42 @@ const DuoPage = (props) => {
 						else if(main.page === 'contact') setDatabase(ContactDb)
 		}, [main])
 
-		//-----      Contact Page      -----//
 		
+		//-----     ABOUT PAGE     -----//
+
+		const aboutRight = (
+				<div className='aboutContainer'>
+						<div className='aboutLinksOdd'>
+								Linkedin
+						</div>
+						<div className='aboutLinksEven'>
+								Github
+						</div>
+						<div className='aboutLinksOdd'>
+								Stackoverflow
+						</div>
+						<div className='aboutLinksEven'>
+								CodinGame
+						</div>
+				</div>
+		)
+
+		
+		//-----     SKILLS PAGE     -----//
+
+
+		const skillsRight = (
+				<div className='skillsContainer'>
+						<div className='circleTop'/>
+						<div className='circleRight'/>
+						<div className='circleLeft'/>
+				</div>
+		)
+
+
+		//-----     CONTACT PAGE      -----//
+		
+
 		const [message, setMessage] = useState({})
 
 		function handleSend(e) {
@@ -85,6 +119,8 @@ return(
 				</div>
 				<div className='rightSide'>
 						{main.page === 'contact' && contactMap}
+						{main.page === 'about' && aboutRight}
+						{main.page === 'skills' && skillsRight}
 				</div>
 		</div>
 )};
