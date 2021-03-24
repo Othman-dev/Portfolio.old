@@ -14,7 +14,7 @@ const Skills = () => {
 		},[dispatch]);
 
 return (
-		<div>
+		<div className='skillsMain'>
 				<Loading title='Skills'/>
 				<DuoPage/>
 		</div>

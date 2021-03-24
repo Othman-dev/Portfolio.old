@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import './layoutPage.scss';
 import Balise, { BaliseOn, BaliseOff } from '../balise/balise.js';
 import { MainContext } from '../../context/mainContext.js';
-import  { AboutDb, SkillsDb, ContactDb } from '../../database/database.js';
+import { AboutDb, SkillsDb, ContactDb } from '../../database/database.js';
 import emailjs from 'emailjs-com';
 import ContactMap  from './contactMap.js';
 
@@ -47,7 +47,7 @@ const DuoPage = (props) => {
 				<div className='skillsContainer'>
 						<div className='circleTop'/>
 						<div className='circleRight'/>
-						<div className='circleLeft'/>
+						<div className='circleBottom'/>
 				</div>
 		)
 
@@ -90,7 +90,7 @@ const DuoPage = (props) => {
 		)  
 		
 		const contactMap = (
-				<div className='rightBlock contactMapContainer'>
+				<div className='contactMapContainer'>
 						<p className='infoMap'>
 								Othman Abboud<br/>
 								Ynystawe, Swansea, Wales.<br/>

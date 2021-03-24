@@ -1,11 +1,9 @@
 @import '../../_default.scss';
 
 .duoPage {
-		position: absolute;
-		display: flex;
-		flex-direction: row;
+		position: relative;
 		height: 100vh;
-		width: 85vw;
+		width: 100%;
 }
 
 //-----     LEFT SIDE     -----//
@@ -22,7 +20,6 @@
 				position: relative;
 				left: 5vw;
 				height: fit-content;
-				width: 100%;
 				h1, p, form {
 						position: relative;
 						left: 1vw;
@@ -36,7 +33,7 @@
 		color: white;
 		border-radius: 4% / 30%;
 		border: solid 1px #FFFFFF30;
-		font-size: 2vh;
+		font-size: 1.3rem;
 		height: 4vh;
 		width: 14.9vw;
 }
@@ -53,7 +50,7 @@
 		min-width: 30vw;
 		border-radius: 2% / 4%;
 		border: solid 1px #FFFFFF30;
-		font-size: 2vh;
+		font-size: 1.1rem;
 
 }
 
@@ -66,7 +63,7 @@
 		left: 25.3vw;
 		border-radius: 8% / 15%;
 		border: solid 1px #FFFFFF30;
-		font-size: 2.5vh;
+		font-size: 1.7rem;
 }
 
 
@@ -111,7 +108,7 @@
 				width: 15vw;
 				border-radius: 20% 0% 0% 20% / 30%;
 				background-image: linear-gradient(to right, #FFF, #FFFFFF40, #00000000);
-				animation: leftToRight 4s ease-in;
+				animation: leftToRight 3s ease-in-out;
 		}
 		.aboutLinksEven{
 				position: relative;
@@ -120,19 +117,19 @@
 				width: 15vw;
 				border-radius: 0% 20% 20% 0% / 30%;
 				background-image: linear-gradient(to left, #FFF, #FFFFFF40, #00000000);
-				animation: rightToLeft 4s ease-in;
+				animation: rightToLeft 3s ease-in-out;
 		}
 }
 
 @keyframes leftToRight {
 		0%{ opacity:0; transform: translateX(-50px); };
-		40%{ opacity:0; transform: translateX(-50px); };
+		50%{ opacity:0; transform: translateX(-50px); };
 		100%{ opacity:1; transform: translateX(0); };
 }
 
 @keyframes rightToLeft {
 		0%{ opacity:0; transform: translateX(50px); };
-		40%{ opacity:0; transform: translateX(50px); };
+		50%{ opacity:0; transform: translateX(50px); };
 		100%{ opacity:1; transform: translateX(0); };
 }
 
@@ -143,54 +140,54 @@
 		height: 100%;
 		width: 100%;
 		
-		.circleTop{
+		.circleRight{
 				position: absolute;
 				z-index: 3;
 				height: 50vh;
 				width: 50vh;
 				border-radius: 50%;
 				border: solid white;
-				transform: translateY(-30%);
-				animation: appearTop 4s ease-in;
+				transform: translateX(30%);
+				animation: appearRight 3s ease-in-out;
 		}
-		.circleRight{
+		.circleTop{
 				position: absolute;
 				z-index: 4;
 				height: 50vh;
 				width: 50vh;
 				border-radius: 50%;
 				border: solid white;
-				transform: translate( 35%,35% );
-				animation: appearRight 4s ease-in;
+				transform: translate( -35%,35% );
+				animation: appearTop 3s ease-in-out;
 		}
-		.circleLeft{
+		.circleBottom{
 				position: absolute;
 				z-index: 5;
 				height: 50vh;
 				width: 50vh;
 				border-radius: 50%;
 				border: solid white;
-				transform: translate( -35%,35% );
-				animation: appearLeft 4s ease-in;
+				transform: translate( -35%,-35% );
+				animation: appearBottom 3s ease-in-out;
 		}
 }
 
-@keyframes appearTop{
-		0% {opacity: 0; transform: translateY(-60%)}
-		40% {opacity: 0; transform: translateY(-60%)}
-		100% {opacity: 1; transform: translateY(-30%)}
+@keyframes appearRight{
+		0% {opacity: 0; transform: translateX(60%)}
+		50% {opacity: 0; transform: translateX(60%)}
+		100% {opacity: 1; transform: translateX(30%)}
 }
 
-@keyframes appearLeft{
+@keyframes appearBottom{
 		0% {opacity: 0; transform: translate(-65%,65%)}
-		40% {opacity: 0; transform: translate(-65%,65%)}
+		50% {opacity: 0; transform: translate(-65%,65%)}
 		100% {opacity: 1; transform: translate(-35%,35%)}
 }
 
-@keyframes appearRight{
-		0% {opacity: 0; transform: translate( 65%,65%)}
-		40% {opacity: 0; transform: translate( 65%,65%)}
-		100% {opacity: 1; transform: translate( 35%,35%)}
+@keyframes appearTop{
+		0% {opacity: 0; transform: translate( -65%,-65%)}
+		50% {opacity: 0; transform: translate( -65%,-65%)}
+		100% {opacity: 1; transform: translate( -35%,-35%)}
 }
 
 .contactMapContainer {
@@ -198,6 +195,5 @@
 		height: 100vh;
 		width: 40vw;
 		right: 0;
-		z-index:2;
 }
 

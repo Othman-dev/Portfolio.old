@@ -14,7 +14,7 @@ const About = () => {
 		},[dispatch]);
 
 return (
-		<div>
+		<div className='aboutMain'>
 				<Loading title='About'/>
 				<DuoPage/>
 		</div>

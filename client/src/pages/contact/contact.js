@@ -14,7 +14,7 @@ const Contact = () => {
 		},[dispatch]);
 
 return (
-		<div>
+		<div className='contactMain'>
 				<Loading title='Contact'/>
 				<DuoPage/>
 		</div>
