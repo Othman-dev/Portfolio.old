@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
-import './layoutPage.scss';
+import './duoPage.scss';
 import Balise, { BaliseOn, BaliseOff } from '../balise/balise.js';
 import { MainContext } from '../../context/mainContext.js';
 import { AboutDb, SkillsDb, ContactDb } from '../../database/database.js';
-import emailjs from 'emailjs-com';
+import Axios from 'axios';
 import ContactMap  from './contactMap.js';
 
 
@@ -59,7 +59,7 @@ const DuoPage = (props) => {
 
 		function handleSend(e) {
 				e.preventDefault();
-				emailjs.send('service_workmail', 'template_portfolio', message, process.env.REACT_APP_EMAIL_KEY)
+				Axios.post('/api/email', message)
 				.then((result) => {
 						console.log(result.text);
 				}, (error) => {
@@ -81,7 +81,7 @@ const DuoPage = (props) => {
 								<br/>
 								<input className='formInput formSubject' name='subject' placeholder='Subject' type='text' onChange={handleChange} required/>
 								<br/>
-								<textarea className='formMessage' name='message' placeholder='Message...' type='text' onChange={handleChange} required/>
+								<textarea className='formMessage' name='content' placeholder='Message...' type='text' onChange={handleChange} required/>
 								<br/>
 								<input className='formButton' type='submit' value='send'/>
 						</form>
@@ -93,9 +93,7 @@ const DuoPage = (props) => {
 				<div className='contactMapContainer'>
 						<p className='infoMap'>
 								Othman Abboud<br/>
-								Ynystawe, Swansea, Wales.<br/>
-								<br/>
-								<span>@</span> : othman@workmail.com
+								Ynystawe, Swansea, Wales.
 						</p>
 						<ContactMap/>
 				</div>

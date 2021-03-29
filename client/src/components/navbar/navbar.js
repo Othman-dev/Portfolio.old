@@ -1,16 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './navbar.scss';
 import { NavLink } from 'react-router-dom';
 import { MainContext } from '../../context/mainContext.js';
 import classNames from 'classnames';
 import Logo from '../../assets/logo.png';
 import Wood from '../../assets/wood.jpg';
+import ReactPlayer from 'react-player/lazy';
 import { FaMusic } from 'react-icons/fa';
 
 
 const Navbar = () => {
 
 		const { main, dispatch } = useContext(MainContext);
+
+		const [playing, setPlaying] = useState(false);
 
 		const musicClass = classNames({
 				'lightOff': true,
@@ -30,6 +33,22 @@ const Navbar = () => {
 				'knobContact': main.page === 'contact' ? true : false
 		});
 
+		const musicTextContainer = classNames({
+				'musicTextContainer':true,
+				'musicTextContainerOn': main.music ? true : false
+		});
+
+		function musicClick() {
+				dispatch({type: 'musicSwitch'});
+				setPlaying(!playing);
+
+		};
+
+		function musicLink() {
+				window.open('https://www.youtube.com/watch?v=1G9SIcIfXAw', '_blank');
+		};
+
+
 return(
 		<div className='navbar'>
 				<img className='imageBg' src={Wood} alt='wood'/>
@@ -45,15 +64,25 @@ return(
 						<div className={knobClass}>
 								<div className='knobEffect'/>
 								<div className='knobMarker'/>
+				
 						</div>
 						<div className='menuBottom'>
 								<NavLink className='projects' activeClassName='activeLink' to='/projects'>Projects</NavLink>
 								<NavLink className='skills' activeClassName='activeLink' to='/skills'>Skills</NavLink>
 						</div>
 				</div>
+				<div className='musicContainer' onClick={musicLink}>
+						<div className={musicTextContainer}>
+								<p className='musicText'>Merkaba</p>
+								<p className='musicText'>Oneness</p>
+								<p className='musicText'>Merkaba</p>
+								<p className='musicText'>Oneness</p>
+						</div>
+						<ReactPlayer className='musicPlayer' url='https://www.youtube.com/watch?v=1G9SIcIfXAw' loop='true' volume='0.2' playing={playing}/>
+				</div>
 				<div className='switches'>
 						<div className={musicClass}/>
-						<button onClick={() => dispatch({type: 'musicSwitch'})}>
+						<button onClick={musicClick}>
 								<FaMusic className='faMusic'/>
 						</button>
 						<div className={frenchClass}/>
