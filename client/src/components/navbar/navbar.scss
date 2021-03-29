@@ -153,18 +153,17 @@
 				width: fit-content;
 				opacity: 0;
 				cursor: pointer;
+				transition: all 1s;
+				animation: musicScreen 8s infinite;
+				animation-timing-function: linear;
 		}
 		.musicTextContainerOn{
-				animation: musicScreen 4s infinite;
-				animation-timing-function: linear;
-				transition: all 1s;
 				opacity: 1;
 		}
 
 		p{
 				color: $green-logo;
 				font-size: 1rem;
-				background: none;
 				margin-left: 1.2vw;
 				margin-right: 1vw;
 		}
