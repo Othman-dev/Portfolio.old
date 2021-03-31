@@ -39,37 +39,52 @@
 		top: 52%;
 		transform: translate( 0,-50%);
 		flex-direction: column;
-		justify-content: center;
 
-		.menuTop {
-				display: flex;
-				justify-content: space-around;
-
-				.contact {
-						position: relative;
-						transform: translate( -100%,200% );
-						text-decoration: none;
-						color: black;
-				}
-
-				.off {
-						transform: translate( -25% , 0% );
-						text-decoration: none;
-						color: black;
-				}
-
-				.about {
-						position: relative;
-						transform: translate( 95%,200% );
-						text-decoration: none;
-						color: black;
-				}
-		
-				.activeLink {
-						color: $active-light;
-				}
+		.contact {
+				position: absolute;
+				top: 2vh;
+				right: 14vh;
+				text-decoration: none;
+				color: black;
 		}
 
+		.off {
+				position: absolute;
+				top: -1.5vh;
+				left: 5vh;
+				text-decoration: none;
+				color: black;
+		}
+
+		.about {
+				position: absolute;
+				top: 2vh;
+				left: 14vh;
+				width: 4vw;
+				text-decoration: none;
+				color: black;
+		}
+
+		.skills {
+				position: absolute;
+				bottom: 2vh;
+				left: 14vh;
+				text-decoration: none;
+				color: black;
+		}
+
+		.projects {
+				position: absolute;
+				bottom: 2vh;
+				right: 14vh;
+				text-decoration: none;
+				color: black;
+		}
+		
+		.activeLink {
+				color: $active-light;
+		}
+		
 		.knob{
 				height: 13vh;
 				width: 13vh;
@@ -109,32 +124,11 @@
 				transform: rotate(-60deg);
 		}
 
-		.menuBottom {
-				display: flex;
-				justify-content: space-around;
-
-				.skills {
-						position: relative;
-						transform: translate( 120%,-200% );
-						text-decoration: none;
-						color: black;
-				}
-
-				.projects {
-						position: relative;
-						transform: translate( -110%,-200% );
-						text-decoration: none;
-						color: black;
-				}
-		
-				.activeLink {
-						color: $active-light;
-				}
-		}
 }
 
 
-/*-----     MUSICVIDEO     -----*/
+/*-----     MUSIC     -----*/
+
 
 .musicContainer{
 		position: absolute;

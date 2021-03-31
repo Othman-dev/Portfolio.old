@@ -8,14 +8,14 @@
 
 .homeTitle {
 		position: relative;
-		height: 13vh;
 		top: 25vh;
 		left: 5vw;
 		
 		h1 {
+				max-width: 40vw;
 				position: relative;
-				left: 2vw;
 				font-size: 5.5rem;
+				left: 2vw;
 				color: #FFF;
 		}
 
@@ -27,7 +27,7 @@
 
 .homeContent {
 		position: relative;
-		top: 51vh;
+		top: 25vh;
 		left: 5vw;
 		
 		p {
@@ -35,8 +35,6 @@
 				position: relative;
 				left: 5vw;
 				font-size: 1.7rem;
-				width: fit-content;
-				background-color: $primary-text;
 				color: #777;
 		}
 }

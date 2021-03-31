@@ -15,7 +15,7 @@ const Projects = () => {
 
 return (
 		<div className='projectsContainer'>
-				<Loading/>
+				<Loading title='Projects'/>
 				<BaliseLayout/>
 				<div className='projectsBaliseOn'><BaliseOn content='link'/></div> 
 				<div className='clipContainer'>

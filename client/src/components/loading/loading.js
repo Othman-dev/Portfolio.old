@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import './loading.scss';
 import Sound from '../../assets/sound.png';
+import { MainContext } from '../../context/mainContext.js';
 
 const Loading = (props) => {
+
+		const { main } = useContext(MainContext);
 		
 		const { title } = props;
 
@@ -29,7 +32,7 @@ return(
 								<img src={Sound} alt='sound' className='soundImage'/>
 								<div className='soundAnim'/>
 						</div>
-						<div className='loadingText'>sending {title} signal</div>
+						<div className='loadingText'>{!main.french ? `receiving ${title} signal` : `réception du signal de ${title}`}</div>
 				</div> 
 		}
 		</div>

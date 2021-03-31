@@ -58,8 +58,8 @@ return(
 				<div className='menu'>
 						<div className='menuTop'>
 								<NavLink className='contact' activeClassName='activeLink' to='/contact'>Contact</NavLink>
-								<NavLink exact className='off' activeClassName='activeLink' to='/'>Off</NavLink>
-								<NavLink className='about' activeClassName='activeLink' to='/about'>About</NavLink>
+								<NavLink exact className='off' activeClassName='activeLink' to='/'>{!main.french ? 'Home': 'Accueil'}</NavLink>
+								<NavLink className='about' activeClassName='activeLink' to='/about'>{!main.french ? 'About' : 'A propos'}</NavLink>
 						</div>
 						<div className={knobClass}>
 								<div className='knobEffect'/>
@@ -67,8 +67,8 @@ return(
 				
 						</div>
 						<div className='menuBottom'>
-								<NavLink className='projects' activeClassName='activeLink' to='/projects'>Projects</NavLink>
-								<NavLink className='skills' activeClassName='activeLink' to='/skills'>Skills</NavLink>
+								<NavLink className='projects' activeClassName='activeLink' to='/projects'>{!main.french ? 'Projects' : 'Projets'}</NavLink>
+								<NavLink className='skills' activeClassName='activeLink' to='/skills'>{!main.french ? 'Skills' : 'Aptitudes'}</NavLink>
 						</div>
 				</div>
 				<div className='musicContainer' onClick={musicLink}>
