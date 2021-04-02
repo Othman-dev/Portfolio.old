@@ -11,6 +11,7 @@ const Home = () => {
 		
 		useEffect(() => {
 				dispatch({type: 'homePage'})
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 		},[]);
 
 
@@ -22,7 +23,7 @@ return (
 						<BaliseOn content='h1'/>
 						<h1>Hello world.</h1>
 						<h1>{!main.french ? 'I am ' : 'Je suis ' }<div className='nameColor'>Othman</div>,</h1>
-						<h1>{!main.french ? 'web developer.' : ' web developpeur'}</h1>
+						<h1>{!main.french ? 'web developer.' : 'developpeur web'}</h1>
 						<BaliseOff content='h1'/>
 				</div>
 				<div className='homeContent'>

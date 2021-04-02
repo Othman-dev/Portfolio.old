@@ -18,7 +18,7 @@ const Matrix = () => {
 				canvas.width = window.innerWidth;
 				canvas.height = window.innerHeight;
 				const ctx = canvas.getContext('2d');
-				const fontSize = window.innerHeight / 70;
+				const fontSize = window.innerHeight / 60;
 				const columns = canvas.width / fontSize;
 				const drops = [];
 				for(let y = 0; y < columns ; y++){
@@ -27,7 +27,7 @@ const Matrix = () => {
 				setInterval( () => {
 						ctx.fillStyle = '#0001';
 						ctx.fillRect(0, 0, canvas.width, canvas.height);
-						ctx.fillStyle = '#0F0';
+						ctx.fillStyle = '#7DB003';
 						ctx.font = fontSize + 'px sans-sherif';
 						for(let i=0; i < columns; i++){
 								const text = Math.floor(Math.random()*2)
@@ -46,6 +46,7 @@ const Matrix = () => {
 								y: e.clientY
 						})
 				}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 		},[])
 
 		// Logo that goes on top of clipPath

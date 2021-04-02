@@ -16,7 +16,6 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => res.send('API RUNNING'));
 
 app.use('/api/email', require('./routes/email'))
-app.use('/api/data', require('./routes/data'))
 
 //PORT & Listen
 const PORT = process.env.PORT || 5000;

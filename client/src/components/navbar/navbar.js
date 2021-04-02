@@ -78,7 +78,7 @@ return(
 								<p className='musicText'>Merkaba</p>
 								<p className='musicText'>Oneness</p>
 						</div>
-						<ReactPlayer className='musicPlayer' url='https://www.youtube.com/watch?v=1G9SIcIfXAw' loop='true' volume='0.2' playing={playing}/>
+						<ReactPlayer className='musicPlayer' url='https://www.youtube.com/watch?v=1G9SIcIfXAw' loop={true} volume={0.2} playing={playing}/>
 				</div>
 				<div className='switches'>
 						<div className={musicClass}/>

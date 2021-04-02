@@ -1,6 +1,102 @@
+@import '../../_default.scss';
+
 .skillsMain {
 		position: relative;
 		height: 100%;
 		width:100%;
 }
 
+
+//-----     LEFT SIDE     -----//
+
+
+.leftSide {
+		height: 100%;
+		width: 50%;
+		float: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	
+		.leftBlock {
+				position: relative;
+				left: 5vw;
+				height: fit-content;
+				h1, p, form {
+						position: relative;
+						left: 1vw;
+				}
+		}
+}
+
+
+//-----     RIGHT SIDE     -----//
+
+
+.rightSide {
+		height: 100%;
+		width: 50%;
+		float: right;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+}
+
+.skillsContainer{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		
+		.circleRight{
+				position: absolute;
+				z-index: 3;
+				height: 50vh;
+				width: 50vh;
+				border-radius: 50%;
+				border: solid white;
+				transform: translateX(30%);
+				animation: appearRight 3s ease-in-out;
+		}
+		.circleTop{
+				position: absolute;
+				z-index: 4;
+				height: 50vh;
+				width: 50vh;
+				border-radius: 50%;
+				border: solid white;
+				transform: translate( -35%,35% );
+				animation: appearTop 3s ease-in-out;
+		}
+		.circleBottom{
+				position: absolute;
+				z-index: 5;
+				height: 50vh;
+				width: 50vh;
+				border-radius: 50%;
+				border: solid white;
+				transform: translate( -35%,-35% );
+				animation: appearBottom 3s ease-in-out;
+		}
+}
+
+@keyframes appearRight{
+		0% {opacity: 0; transform: translateX(60%)}
+		50% {opacity: 0; transform: translateX(60%)}
+		100% {opacity: 1; transform: translateX(30%)}
+}
+
+@keyframes appearBottom{
+		0% {opacity: 0; transform: translate(-65%,65%)}
+		50% {opacity: 0; transform: translate(-65%,65%)}
+		100% {opacity: 1; transform: translate(-35%,35%)}
+}
+
+@keyframes appearTop{
+		0% {opacity: 0; transform: translate( -65%,-65%)}
+		50% {opacity: 0; transform: translate( -65%,-65%)}
+		100% {opacity: 1; transform: translate( -35%,-35%)}
+}
