@@ -23,6 +23,13 @@
 				h1, p, form {
 						position: relative;
 						left: 1vw;
+						white-space: pre-wrap;
+						text-align: justify;
+						text-justify: auto;
+				}
+				p{
+						text-align: justify;
+						text-justify: auto;
 				}
 		}
 }
@@ -48,15 +55,24 @@
 		justify-content: space-around;
 		align-items: space-around;
 		align-content: center;
-		
+
+		span{
+				color: $green-logo;
+				font-size: 1.3rem;
+		}
 		.aboutLinksOdd{
 				position: relative;
 				left: 5vw;
 				height: 10vh;
 				width: 15vw;
 				border-radius: 20% 0% 0% 20% / 30%;
-				background-image: linear-gradient(to right, #FFF, #FFFFFF40, #00000000);
+				background-image: linear-gradient(to right, #FFF, #FFFFFF90, #00000000);
 				animation: leftToRight 3s ease-in-out;
+				cursor: pointer;
+				display: flex;
+				flex-direction: row;
+				justify-content: left;
+				align-items: center;
 		}
 		.aboutLinksEven{
 				position: relative;
@@ -64,8 +80,28 @@
 				height: 10vh;
 				width: 15vw;
 				border-radius: 0% 20% 20% 0% / 30%;
-				background-image: linear-gradient(to left, #FFF, #FFFFFF40, #00000000);
+				background-image: linear-gradient(to left, #FFF, #FFFFFF90, #00000000);
 				animation: rightToLeft 3s ease-in-out;
+				cursor: pointer;
+				display: flex;
+				flex-direction: row;
+				justify-content: right;
+				align-items: center;
+		}
+		p{
+				color: black;
+				font-size: 1rem;
+				white-space: pre-wrap;
+		}
+		.AboutIconLink{
+				height: 5vh;
+				width: 5vh;
+				margin: 1vh;
+		}
+		.AboutIconLinkCodingame{
+				height: 8vh;
+				width: 8vh;
+				margin: 1vh;
 		}
 }
 
