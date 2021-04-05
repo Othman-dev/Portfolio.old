@@ -9,7 +9,7 @@
     "server": "nodemon server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-	"heroku-postbuild": "NPM_CONFIG_PORDUCTION=false npm add --prefix client && npm run build"
+	"heroku-postbuild": "NPM_CONFIG_PORDUCTION=false npm install --prefix client && npm run build"
   },
   "repository": "git+https://github.com/Othman-dev/Portfolio.git",
   "author": "Othman-dev",
