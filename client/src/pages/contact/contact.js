@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import './contact.scss';
+import { dataEn, dataFr } from './contactData.js';
 import Loading from '../../components/loading/loading.js';
 import Balise, { BaliseOn, BaliseOff } from '../../components/balise/balise.js';
 import { MainContext } from '../../context/mainContext.js';
@@ -9,7 +10,7 @@ import Axios from 'axios';
 
 const Contact = () => {
 
-		const { dispatch } = useContext(MainContext);
+		const { main, dispatch } = useContext(MainContext);
 
 		useEffect(() => {
 				dispatch({type: 'contactPage'})
@@ -40,12 +41,12 @@ return (
 						<Balise/>
 						<div className='leftBlock'>
 								<BaliseOn content='h1'/>
-								<h1>{'test'}</h1>	
+								<h1>{!main.french ? dataEn.title : dataFr.title}</h1>	
 								<BaliseOff content='h1'/>
 						</div>
 						<div className='leftBlock'>
 								<BaliseOn content='p'/>
-								<p>{'test'}</p>
+								<p>{!main.french ? dataEn.content : dataFr.content}</p>
 								<BaliseOff content='p'/>
 						</div>
 						<div className='leftBlock'>

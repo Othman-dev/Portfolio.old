@@ -68,7 +68,7 @@
 				width: 50vh;
 				border-radius: 50%;
 				border: solid white;
-				transform: translate( -35%,35% );
+				transform: translate( -35%,-35% );
 				animation: appearTop 3s ease-in-out;
 		}
 		.circleBottom{
@@ -78,7 +78,7 @@
 				width: 50vh;
 				border-radius: 50%;
 				border: solid white;
-				transform: translate( -35%,-35% );
+				transform: translate( -35%,35% );
 				animation: appearBottom 3s ease-in-out;
 		}
 }
@@ -99,4 +99,167 @@
 		0% {opacity: 0; transform: translate( -65%,-65%)}
 		50% {opacity: 0; transform: translate( -65%,-65%)}
 		100% {opacity: 1; transform: translate( -35%,-35%)}
+}
+
+// RightSide Content
+
+.circleTopContent{
+		height: 100%;
+		width: 100%;
+		
+		.frontEnd{
+				position: absolute;
+				top: 15vh;
+				left: 18vh;
+				color: $green-logo;
+				font-weight: bold;
+				font-size: 2rem;
+		}
+		.skills{
+				position: absolute;
+				color: #CCC;
+				font-size: 1rem;
+		}
+		.html{
+				top: 12vh;
+				left: 8vh;
+		}
+		.css{
+				top: 10vh;
+				left: 35vh;
+		}
+		.js{
+				top: 38vh;
+				left: 19vh;
+		}
+		.ts{
+				top: 46vh;
+				left: 19vh;
+		}
+		.react{
+				top: 29vh;
+				left: 8vh;
+		}
+		.sass{
+				top: 5vh;
+				left: 28vh;
+		}
+		.redux{
+				top: 32vh;
+				left: 18vh;
+		}
+		.webgl{
+				top: 23vh;
+				left: 13vh;
+		}
+}
+
+.circleBottomContent{
+		height: 100%;
+		width: 100%;
+		
+		.backEnd{
+				position: absolute;
+				bottom: 15vh;
+				left: 18vh;
+				color: $green-logo;
+				font-weight: bold;
+				font-size: 2rem;
+		}
+		.skills{
+				position: absolute;
+				color: #CCC;
+				font-size: 1rem;
+		}
+		.node{
+				bottom: 12vh;
+				left: 8vh;
+		}
+		.express{
+				bottom: 10vh;
+				left: 35vh;
+		}
+		.js{
+				top: 2.5vh;
+				left: 19vh;
+		}
+		.ts{
+				top: 10.5vh;
+				left: 19vh;
+		}
+		.mongodb{
+				top: 25vh;
+				left: 10vh;
+		}
+		.socketio{
+				top: 19vh;
+				left: 5vh;
+		}
+		.cors{
+				top: 20vh;
+				left: 24vh;
+		}
+		.jwt{
+				bottom: 5vh;
+				left: 23vh;
+		}
+}
+
+.circleRightContent{
+		height: 100%;
+		width: 100%;
+		
+		.control{
+				position: absolute;
+				top: 23vh;
+				left: 18vh;
+				color: $green-logo;
+				font-weight: bold;
+				font-size: 2rem;
+		}
+		.mern{
+				position: absolute;
+				top: 23.2vh;
+				left: 0vh;
+				color: $green-logo;
+				font-weight: bold;
+				font-size: 1.7rem;
+				animation: mernAppear 5s;
+		}
+		.skills{
+				position: absolute;
+				color: #CCC;
+				font-size: 1rem;
+		}
+		.githubtop{
+				position: absolute;
+				top: 13vh;
+				left: 7vh;
+		}
+		.githubbottom{
+				bottom: 13vh;
+				left: 7vh;
+		}
+		.firebase{
+				top: 16vh;
+				left: 30vh;
+		}
+		.heroku{
+				bottom: 15vh;
+				left: 29vh;
+		}
+		.jest{
+				top: 8vh;
+				left: 23vh;
+		}
+		.mongoatlas{
+				bottom: 7vh;
+				left: 22vh;
+		}
+}
+
+@keyframes mernAppear {
+		0%{opacity: 0%}
+		66%{opacity: 0%}
+		100%{opacity: 100%}
 }

@@ -45,7 +45,7 @@ const Navbar = () => {
 		};
 
 		function musicLink() {
-				window.open('https://www.youtube.com/watch?v=1G9SIcIfXAw', '_blank');
+				window.open('https://www.youtube.com/watch?v=HxF_ws9aeB0', '_blank');
 		};
 
 
@@ -74,11 +74,11 @@ return(
 				<div className='musicContainer' onClick={musicLink}>
 						<div className={musicTextContainer}>
 								<p className='musicText'>Merkaba</p>
-								<p className='musicText'>Oneness</p>
+								<p className='musicText'>Solar  Ohm</p>
 								<p className='musicText'>Merkaba</p>
-								<p className='musicText'>Oneness</p>
+								<p className='musicText'>Solar  Ohm</p>
 						</div>
-						<ReactPlayer className='musicPlayer' url='https://www.youtube.com/watch?v=1G9SIcIfXAw' loop={true} volume={0.2} playing={playing}/>
+						<ReactPlayer className='musicPlayer' url='https://www.youtube.com/watch?v=HxF_ws9aeB0' loop={true} volume={0.2} playing={playing}/>
 				</div>
 				<div className='switches'>
 						<div className={musicClass}/>

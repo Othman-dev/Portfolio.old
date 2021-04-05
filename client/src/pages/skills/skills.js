@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import './skills.scss';
+import { dataEn, dataFr, circleTopContent, circleRightContent, circleBottomContent } from './skillsData.js';
 import Loading from '../../components/loading/loading.js';
 import Balise, { BaliseOn, BaliseOff } from '../../components/balise/balise.js';
 import { MainContext } from '../../context/mainContext.js';
@@ -7,7 +8,7 @@ import { MainContext } from '../../context/mainContext.js';
 
 const Skills = () => {
 
-		const { dispatch } = useContext(MainContext);
+		const { main, dispatch } = useContext(MainContext);
 		
 		useEffect(() =>{
 				dispatch({type: 'skillsPage'})
@@ -20,20 +21,20 @@ return (
 						<Balise/>
 						<div className='leftBlock'>
 								<BaliseOn content='h1'/>
-								<h1>{'test'}</h1>	
+								<h1>{!main.french ? dataEn.title : dataFr.title}</h1>	
 								<BaliseOff content='h1'/>
 						</div>
 						<div className='leftBlock'>
 								<BaliseOn content='p'/>
-								<p>{'test'}</p>
+								<p>{!main.french ? dataEn.content : dataFr.content}</p>
 								<BaliseOff content='p'/>
 						</div>
 				</div>
 				<div className='rightSide'>
 				<div className='skillsContainer'>
-						<div className='circleTop'/>
-						<div className='circleRight'/>
-						<div className='circleBottom'/>
+						<div className='circleTop'>{circleTopContent}</div>
+						<div className='circleRight'>{circleRightContent}</div>
+						<div className='circleBottom'>{circleBottomContent}</div>
 				</div>
 				</div>
 		</div>

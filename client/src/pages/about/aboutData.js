@@ -1,6 +1,6 @@
 export const dataEn = {
 		title: "Me, myself and I",
-		content: "I am a Fullstack developer located in Wales, UK. My goal is to create interactive, easy to use and efficient user experience.\n\nIndependant inquisitive mind and problem solver. I enjoy learning and testing myself to sharpen my skills, and produce more elaborate and efficient programs.\n\nAble to fill the Front-End and/or Back-end roles. Always ready to work with enthusiastic people on ambitious projects.",
+		content: "   I am a Fullstack developer located in Wales, UK. My goal is to create interactive, easy to use and efficient user experience.\n\n   Independent inquisitive mind and problem solver. I enjoy learning and testing myself to sharpen my skills, and produce more elaborate and efficient programs.\n\n   Able to fill the Front-End and/or Back-end roles. Always ready to work with enthusiastic people on ambitious projects.",
 		linkTitle: "Use this link for more details about what I do",
 		linkedin: `My LinkedIn profile \n for more details`,
 		github: `Repo for this website \n and Github profile`,
@@ -9,8 +9,8 @@ export const dataEn = {
 }
 
 export const dataFr = {
-		title: "Ce que je fais",
-		content: "test en francais",
+		title: "Qui suis-je ?",
+		content: "   Développeur Fullstack, habitant au Pays de Galles, Royaume-Uni. Mon Objectif est de produire une experience utilsateur accéssible, intéractive et éfficace.\n\n   D'un naturel indépendant, curieux et résolveur de problèmes. J'aime apprendre et me tester pour affiner mes compétences et produire des programmes toujours plus élaborés et éfficaces.\n\n   Aussi à l'aise en Front-End que en Back-End. Je suis toujours prêt à travailler sur des projets ambitieux avec des gens animés.",
 		linkTitle: "Utilisez ces liens pour plus de détails sur mon travail",
 		linkedin: `Mon profil Linkedin \n pour plus de détails`,
 		github: `Code de ce website \n et profil Github`,
