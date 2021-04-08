@@ -14,7 +14,6 @@ export const circleTopContent = (
 						<span className='html skills'>HTML5</span>
 						<span className='css skills'>CSS3</span>
 						<span className='js skills'>JavaScript</span>
-						<span className='ts skills'>TypeScript</span>
 						<span className='react skills'>React-Js</span>
 						<span className='sass skills'>Sass</span>
 						<span className='redux skills'>Redux/Context</span>
@@ -31,7 +30,6 @@ export const circleBottomContent = (
 						<span className='socketio skills'>Socket.io</span>
 						<span className='cors skills'>Cors</span>
 						<span className='jwt skills'>JsonWebToken</span>
-						<span className='js skills'>JavaScript</span>
 						<span className='ts skills'>TypeScript</span>
 				</div>
 		)

@@ -35,7 +35,7 @@ const Contact = () => {
 
 
 return (
-		<div className='contactMain'>
+		<div className='mainDuo'>
 				<Loading title='Contact'/>
 				<div className='leftSide'>
 						<Balise/>

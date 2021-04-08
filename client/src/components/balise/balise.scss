@@ -4,8 +4,8 @@
 
 .baliseLayout {
 		position: absolute;
-		height: 100vh;
-		width: 8vw;
+		height: 100%;
+		width: 8%;
 		color: white;
 		opacity: 30%;
 		font-size: 1.2rem;
@@ -15,25 +15,25 @@
 .topHtml {
 		position: absolute;
 		top: 1vh;
-		left: 2vw;
+		margin-left: 1vw;
 }
 
 .bottomHtml {
 		position: absolute;
 		bottom: 2vh;
-		left: 2vw;
+		margin-left: 1vw;
 }
 
 .topBody {
 		position: absolute;
 		top: 4vh;
-		left: 3vw;
+		margin-left: 2vw;
 }
 
 .bottomBody {
 		position: absolute;
 		bottom: 5vh;
-		left: 3vw;
+		margin-left: 2vw;
 }
 
 
@@ -45,3 +45,17 @@
 		font-size: 1.2rem;
 		font-family: 'Caveat', cursive;
 }
+
+
+@media only screen and (max-width : 46em) {
+		.balise,.baliseLayout {
+				font-size: 0.9rem;
+		}
+}
+
+@media only screen and (max-width : 32em) {
+		.balise,.baliseLayout {
+				font-size: 0.6rem;
+		}
+}
+

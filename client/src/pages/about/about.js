@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import './about.scss';
 import Loading from '../../components/loading/loading.js';
-import Balise, { BaliseOn, BaliseOff } from '../../components/balise/balise.js';
+import BaliseLayout, { BaliseOn, BaliseOff } from '../../components/balise/balise.js';
 import { MainContext } from '../../context/mainContext.js';
 import { FaLinkedin, FaGithub, FaStackOverflow,  } from 'react-icons/fa';
 import { ReactComponent as Codingame} from './codingame.svg';
@@ -33,19 +33,19 @@ const About = () => {
 		};
 
 return (
-		<div className='aboutMain'>
+		<div className='mainDuo'>
 				<Loading title='About'/>
+				<BaliseLayout/>
 				<div className='leftSide'>
-						<Balise/>
 						<div className='leftBlock'>
-								<BaliseOn content='h1'/>
-								<h1>{!main.french ? dataEn.title : dataFr.title}</h1>	
-								<BaliseOff content='h1'/>
+						<BaliseOn content='h1'/>
+						<h1>{!main.french ? dataEn.title : dataFr.title}</h1>	
+						<BaliseOff content='h1'/>
 						</div>
 						<div className='leftBlock'>
-								<BaliseOn content='p'/>
-								<p>{!main.french ? dataEn.content : dataFr.content}</p>
-								<BaliseOff content='p'/>
+						<BaliseOn content='p'/>
+						<p>{!main.french ? dataEn.content : dataFr.content}</p>
+						<BaliseOff content='p'/>
 						</div>
 				</div>
 				<div className='rightSide'>

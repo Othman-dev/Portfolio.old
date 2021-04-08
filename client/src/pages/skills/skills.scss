@@ -1,84 +1,37 @@
 @import '../../_default.scss';
 
-.skillsMain {
-		position: relative;
-		height: 100%;
-		width:100%;
-}
-
-
-//-----     LEFT SIDE     -----//
-
-
-.leftSide {
-		height: 100%;
-		width: 50%;
-		float: left;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	
-		.leftBlock {
-				position: relative;
-				left: 5vw;
-				height: fit-content;
-				h1, p, form {
-						position: relative;
-						left: 1vw;
-				}
-		}
-}
-
 
 //-----     RIGHT SIDE     -----//
-
-
 .rightSide {
-		height: 100%;
-		width: 50%;
-		float: right;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-}
 
-.skillsContainer{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 100%;
-		width: 100%;
-		
 		.circleRight{
 				position: absolute;
 				z-index: 3;
-				height: 50vh;
-				width: 50vh;
+				height: 26rem;
+				width: 26rem;
 				border-radius: 50%;
-				border: solid white;
-				transform: translateX(30%);
+				border: .2rem solid white;
+				transform: translateX(35%);
 				animation: appearRight 3s ease-in-out;
 		}
 		.circleTop{
 				position: absolute;
 				z-index: 4;
-				height: 50vh;
-				width: 50vh;
+				height: 26rem;
+				width: 26rem;
 				border-radius: 50%;
-				border: solid white;
-				transform: translate( -35%,-35% );
+				border: .2rem solid white;
+				transform: translate( -30%,-35% );
 				animation: appearTop 3s ease-in-out;
 		}
 		.circleBottom{
 				position: absolute;
 				z-index: 5;
-				height: 50vh;
-				width: 50vh;
+				height: 26rem;
+				width: 26rem;
 				border-radius: 50%;
-				border: solid white;
-				transform: translate( -35%,35% );
+				border: .2rem solid white;
+				transform: translate( -30%,35% );
 				animation: appearBottom 3s ease-in-out;
 		}
 }
@@ -86,19 +39,19 @@
 @keyframes appearRight{
 		0% {opacity: 0; transform: translateX(60%)}
 		50% {opacity: 0; transform: translateX(60%)}
-		100% {opacity: 1; transform: translateX(30%)}
+		100% {opacity: 1; transform: translateX(35%)}
 }
 
 @keyframes appearBottom{
 		0% {opacity: 0; transform: translate(-65%,65%)}
 		50% {opacity: 0; transform: translate(-65%,65%)}
-		100% {opacity: 1; transform: translate(-35%,35%)}
+		100% {opacity: 1; transform: translate(-30%,35%)}
 }
 
 @keyframes appearTop{
 		0% {opacity: 0; transform: translate( -65%,-65%)}
 		50% {opacity: 0; transform: translate( -65%,-65%)}
-		100% {opacity: 1; transform: translate( -35%,-35%)}
+		100% {opacity: 1; transform: translate( -30%,-35%)}
 }
 
 // RightSide Content
@@ -109,8 +62,8 @@
 		
 		.frontEnd{
 				position: absolute;
-				top: 15vh;
-				left: 18vh;
+				top: 30%;
+				left: 30%;
 				color: $green-logo;
 				font-weight: bold;
 				font-size: 2rem;
@@ -121,36 +74,32 @@
 				font-size: 1rem;
 		}
 		.html{
-				top: 12vh;
-				left: 8vh;
+				top: 23%;
+				left: 20%;
 		}
 		.css{
-				top: 10vh;
-				left: 35vh;
+				top: 25%;
+				right: 25%;
 		}
 		.js{
-				top: 38vh;
-				left: 19vh;
-		}
-		.ts{
-				top: 46vh;
-				left: 19vh;
+				bottom: 19%;
+				left: 38%;
 		}
 		.react{
-				top: 29vh;
-				left: 8vh;
+				bottom: 30%;
+				left: 17%;
 		}
 		.sass{
-				top: 5vh;
-				left: 28vh;
+				top: 11%;
+				right: 38%;
 		}
 		.redux{
-				top: 32vh;
-				left: 18vh;
+				bottom: 38%;
+				left: 42%;
 		}
 		.webgl{
-				top: 23vh;
-				left: 13vh;
+				top: 46%;
+				left: 10%;
 		}
 }
 
@@ -160,8 +109,8 @@
 		
 		.backEnd{
 				position: absolute;
-				bottom: 15vh;
-				left: 18vh;
+				bottom: 32%;
+				left: 30%;
 				color: $green-logo;
 				font-weight: bold;
 				font-size: 2rem;
@@ -172,36 +121,32 @@
 				font-size: 1rem;
 		}
 		.node{
-				bottom: 12vh;
-				left: 8vh;
+				bottom: 25%;
+				left: 18%;
 		}
 		.express{
-				bottom: 10vh;
-				left: 35vh;
-		}
-		.js{
-				top: 2.5vh;
-				left: 19vh;
+				bottom: 26%;
+				right: 18%;
 		}
 		.ts{
-				top: 10.5vh;
-				left: 19vh;
+				top: 18%;
+				left: 38%;
 		}
 		.mongodb{
-				top: 25vh;
-				left: 10vh;
+				top: 48%;
+				left: 28%;
 		}
 		.socketio{
-				top: 19vh;
-				left: 5vh;
+				top: 30%;
+				left: 15%;
 		}
 		.cors{
-				top: 20vh;
-				left: 24vh;
+				top: 38%;
+				right: 38%;
 		}
 		.jwt{
-				bottom: 5vh;
-				left: 23vh;
+				bottom: 12%;
+				right: 25%;
 		}
 }
 
@@ -211,19 +156,19 @@
 		
 		.control{
 				position: absolute;
-				top: 23vh;
-				left: 18vh;
+				top: 46%;
+				left: 40%;
 				color: $green-logo;
 				font-weight: bold;
 				font-size: 2rem;
 		}
 		.mern{
 				position: absolute;
-				top: 23.2vh;
-				left: 0vh;
+				top: 46.5%;
+				left: 0%;
 				color: $green-logo;
 				font-weight: bold;
-				font-size: 1.7rem;
+				font-size: 1.5rem;
 				animation: mernAppear 5s;
 		}
 		.skills{
@@ -233,28 +178,28 @@
 		}
 		.githubtop{
 				position: absolute;
-				top: 13vh;
-				left: 7vh;
+				top: 25%;
+				left: 13%;
 		}
 		.githubbottom{
-				bottom: 13vh;
-				left: 7vh;
+				bottom: 25%;
+				left: 13%;
 		}
 		.firebase{
-				top: 16vh;
-				left: 30vh;
+				top: 32%;
+				right: 20%;
 		}
 		.heroku{
-				bottom: 15vh;
-				left: 29vh;
+				bottom: 30%;
+				right: 25%;
 		}
 		.jest{
-				top: 8vh;
-				left: 23vh;
+				top: 17%;
+				left: 45%;
 		}
 		.mongoatlas{
-				bottom: 7vh;
-				left: 22vh;
+				bottom: 13%;
+				left: 40%;
 		}
 }
 
@@ -263,3 +208,39 @@
 		66%{opacity: 0%}
 		100%{opacity: 100%}
 }
+
+
+@media only screen and (max-width : 46em) {
+		.circleRight .skills, .circleTop .skills, .circleBottom .skills{
+				font-size: .8rem;
+		}
+		.circleRight .control, .circleTop .frontEnd, .circleBottom .backEnd{
+				font-size: 1.4rem;
+		}
+		.circleRight .mern{
+				font-size: 1rem;
+		}
+		.rightSide .circleRight, .rightSide .circleTop, .rightSide .circleBottom {
+				height: 18rem;
+				width: 18rem;
+				border: .1rem solid white;
+		}
+}
+
+@media only screen and (max-width : 32em) {
+		.circleRight .skills, .circleTop .skills, .circleBottom .skills{
+				font-size: .4rem;
+		}
+		.circleRight .control, .circleTop .frontEnd, .circleBottom .backEnd{
+				font-size: .7rem;
+		}
+		.circleRight .mern{
+				font-size: .5rem;
+		}
+		.rightSide .circleRight, .rightSide .circleTop, .rightSide .circleBottom {
+				height: 9rem;
+				width: 9rem;
+				border: .05rem solid white;
+		}
+}
+

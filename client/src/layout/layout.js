@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, setState } from 'react';
 import './layout.scss';
 import MainContextProvider from '../context/mainContext.js';
 import Navbar from '../components/navbar/navbar.js';

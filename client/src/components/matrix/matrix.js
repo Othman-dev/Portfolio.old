@@ -75,7 +75,7 @@ const Matrix = () => {
 return(
 		<div className='matrixContainer'>
 				<canvas ref={canvasRef}
-				style={{'clipPath': `circle(10vh at ${pointer.x}px  ${pointer.y}px)`}}/>
+				style={{'clipPath': `circle(6rem at ${pointer.x}px  ${pointer.y}px)`}}/>
 				{matrixHole}
 		</div>
 )};

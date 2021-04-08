@@ -36,7 +36,7 @@
 .menu {
 		display: flex;
 		position: absolute;
-		top: 52%;
+		top: 50%; 
 		transform: translate( 0,-50%);
 		flex-direction: column;
 
@@ -134,7 +134,7 @@
 		position: absolute;
 		z-index: 40;
 		border-radius: 10%/10%;
-		width: 11.5vw;
+		width: 13em;
 		bottom: 3vh;
 		height: 20px;
 		background: #111;
@@ -144,7 +144,7 @@
 		.musicTextContainer{
 				display: flex;
 				flex-direction: row;
-				width: 20vw;
+				width: 100%;
 				opacity: 0;
 				cursor: pointer;
 				transition: all 1s;
@@ -159,8 +159,8 @@
 				color: $green-logo;
 				font-size: 1rem;
 				white-space: pre;
-				margin-left: 1.2vw;
-				margin-right: 1vw;
+				margin-left: 1.2rem;
+				margin-right: 1rem;
 		}
 
 		.musicPlayer{

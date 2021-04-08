@@ -20,7 +20,7 @@ const Loading = (props) => {
 		},[]) 
 
 return(
-		<div>
+		<div className='mainLoading'>
 		{ done ? 
 				
 				<div/>

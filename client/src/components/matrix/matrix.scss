@@ -2,16 +2,17 @@
 
 .matrixContainer {
 		position: absolute;
-		height: 100vh;
-		width: 100vw;
+		height: 100%;
+		width: 100%;
 		background-color: $primary;
 		cursor: none;
+		overflow: hidden;
 }
 
 .holeContainer {
 		position: absolute;
-		height: 20vh;
-		width: 20vh;
+		height: 12.2rem;
+		width: 12.2rem;
 		border-radius: 50%;
 		overflow: hidden;
 		box-shadow: 0px 0px .2vh 1vh $primary;
@@ -94,3 +95,6 @@
 		top: -24%;
 		left: -42.5%;
 }
+
+
+@media only screen and (max-width : 107.5em) {}

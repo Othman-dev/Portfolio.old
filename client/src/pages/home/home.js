@@ -16,20 +16,22 @@ const Home = () => {
 
 
 return (
-		<div className='homeContainer'>
+		<div className='mainDuo'>
 				<Loading title='Home'/>
 				<BaliseLayout/>
-				<div className='homeTitle'>
-						<BaliseOn content='h1'/>
-						<h1>Hello world.</h1>
-						<h1>{!main.french ? 'I am ' : 'Je suis ' }<div className='nameColor'>Othman</div>,</h1>
-						<h1>{!main.french ? 'web developer.' : 'développeur web'}</h1>
-						<BaliseOff content='h1'/>
-				</div>
-				<div className='homeContent'>
-						<BaliseOn content='p'/>
-						<p>{!main.french ? 'Fullstack / MERN developer' : 'Fullstack / Developpeur MERN'}</p>
-						<BaliseOff content='p'/>
+				<div className='leftSide'>
+						<div className='leftBlock'>
+								<BaliseOn content='h1'/>
+								<h1 className='homeH1'>Hello world.</h1>
+								<h1 className='homeH1'>{!main.french ? 'I am ' : 'Je suis ' }<span className='nameColor'>Othman</span>,</h1>
+								<h1 className='homeH1'>{!main.french ? 'web developer.' : 'développeur web'}</h1>
+								<BaliseOff content='h1'/>
+						</div>
+						<div className='leftBlock'>
+								<BaliseOn content='p'/>
+								<p className='homeP'>{!main.french ? 'Fullstack / MERN developer' : 'Fullstack / Developpeur MERN'}</p>
+								<BaliseOff content='p'/>
+						</div>
 				</div>
 		</div>
 )};
