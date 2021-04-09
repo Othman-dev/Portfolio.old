@@ -14,8 +14,9 @@ const Projects = () => {
 		},[dispatch]);
 
 return (
-		<div className='projectsContainer'>
+		<div>
 				<Loading title='Projects'/>
+		<div className='projectsContainer'>
 				<BaliseLayout/>
 				<div className='projectsBaliseOn'><BaliseOn content='link'/></div> 
 				<div className='clipContainer'>
@@ -42,6 +43,7 @@ return (
 						</div>
 				</div>
 				<div className='projectsBaliseOff'><BaliseOff content='link'/></div> 
+		</div>
 		</div>
 )};
 

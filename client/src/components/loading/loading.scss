@@ -21,44 +21,54 @@
 }
 
 .soundLogo {
-		height: 15vh;
-		width: 30vh;
+		height: 10rem;
+		width: 20rem;
 
 		.soundImage {
 				height:100%;
 				width: 100%;
 		}
 		.soundAnim {
+				position: relative;
+				display: flex;
 				background-color: $primary;
-				box-shadow: 0px 0px .3vh .2vh $green-logo;
-				height: 1vh;
-				width: 1vh;
+				box-shadow: 0 0 .3rem .2rem $green-logo;
+				height: .6rem;
+				width: .6rem;
 				border-radius: 50%;
-				transform: translate( 13.8vw,-7.5vh );
-				animation: sinusoide 1.3s infinite;
+				top: -50%;
+				animation: sinusoide 5.3s infinite;
 		}
 
 		@keyframes sinusoide{
-				0% {transform: translate( 0vw,-7.5vh )}
-				5% {transform: translate( 1.2vw,-7.5vh )}
-				7.5% {transform: translate( 1.9vw,-6.8vh )}
-				15% {transform: translate( 2.7vw,-9vh )}
-				22.5% {transform: translate( 3.65vw,-5.4vh )}
-				30% {transform: translate( 4.6vw,-15vh )}
-				37.5% {transform: translate( 5.5vw,-1.9vh )}
-				45% {transform: translate( 6.4vw,-12.2vh )}
-				55% {transform: translate( 7.35vw,-4.65vh )}
-				62.5% {transform: translate( 8.2vw,-9.5vh )}
-				70% {transform: translate( 9.1vw,-6vh )}
-				77.5% {transform: translate( 10vw,-8.7vh )}
-				85% {transform: translate( 10.95vw,-6.8vh )}
-				92.5% {transform: translate( 11.75vw,-8.1vh )}
-				95% {transform: translate( 12.6vw,-7.5vh )}
-				100% {transform: translate( 13.8vw,-7.5vh )}
+				0% {top:-50%}
+				5% {top:-50%; left:9%}
+				7.5% {top:-45%; left:13%}
+				15% {top:-60%; left:19.5%}
+				22.5% {top:-34.5%; left:25.6%}
+				30% {top:-99%; left:32.2%}
+				37.5% {top:-10%; left:38.7%}
+				45% {top:-81%; left:44.9%}
+				55% {top:-30%; left:51.3%}
+				62.5% {top:-63%; left:57.5%}
+				70% {top:-40%; left:64%}
+				77.5% {top:-58.5%; left:70.1%}
+				85% {top:-45%; left:77%}
+				92.5% {top:-54%; left:83%}
+				95% {top:-50%; left:88%}
+				100% {top:-50%; left:97%}
 		}
 }
 
 .loadingText {
 		color: $green-logo;
 		font-size: 3vh;
+}
+
+
+@media only screen and (max-width : 46em) {
+		.soundLogo {
+				height: 7.5rem;
+				width: 15rem;
+		}
 }
