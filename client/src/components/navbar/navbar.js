@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import Logo from '../../assets/logo.png';
 import Wood from '../../assets/wood.jpg';
 import ReactPlayer from 'react-player/lazy';
+import Slider from 'react-input-slider';
 import { FaMusic } from 'react-icons/fa';
 
 
@@ -14,6 +15,7 @@ const Navbar = () => {
 		const { main, dispatch } = useContext(MainContext);
 
 		const [playing, setPlaying] = useState(false);
+		const [volume, setVolume] = useState({y:0.5})
 
 		const musicClass = classNames({
 				'lightOff': true,
@@ -48,6 +50,8 @@ const Navbar = () => {
 				window.open('https://www.youtube.com/watch?v=HxF_ws9aeB0', '_blank');
 		};
 
+		const sliderStyles = {
+		}
 
 return(
 		<div className='navbar'>
@@ -78,7 +82,10 @@ return(
 								<p className='musicText'>Merkaba</p>
 								<p className='musicText'>Solar  Ohm</p>
 						</div>
-						<ReactPlayer className='musicPlayer' url='https://www.youtube.com/watch?v=HxF_ws9aeB0' loop={true} volume={0.2} playing={playing}/>
+						<ReactPlayer className='musicPlayer' url='https://www.youtube.com/watch?v=HxF_ws9aeB0' loop={true} volume={volume.y} playing={playing}/>
+				</div>
+				<div className='sliderContainer'>
+						<Slider yreverse={true} axis='y' y={volume.y} ymin={0} ymax={1} ystep={0.1} onChange={setVolume} styles={sliderStyle}/>
 				</div>
 				<div className='switches'>
 						<div className={musicClass}/>

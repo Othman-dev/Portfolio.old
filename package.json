@@ -9,7 +9,7 @@
     "server": "nodemon server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-	"heroku-postbuild": "NPM_CONFIG_PORDUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PORDUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": "git+https://github.com/Othman-dev/Portfolio.git",
   "author": "Othman-dev",
@@ -26,6 +26,7 @@
     "@sendgrid/mail": "^7.4.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react-input-slider": "^6.0.0"
   }
 }
