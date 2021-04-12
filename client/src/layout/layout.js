@@ -1,4 +1,4 @@
-import React, { useEffect, setState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './layout.scss';
 import MainContextProvider from '../context/mainContext.js';
 import Navbar from '../components/navbar/navbar.js';
@@ -16,14 +16,26 @@ import Contact from '../pages/contact/contact.js';
 import Error from '../pages/error/error.js';
 
 const Layout = () => {
+		
+		const [navbarFlex, setNavbarFlex] = useState(false);
+
+		function setNavbar() {
+				setNavbarFlex(!navbarFlex)
+				console.log(navbarFlex)
+		}
 
 return(
 		<div className='layout'>
 		<Matrix/>
 		<MainContextProvider>
 				<Router>
-				<div className='navbarContainer'>
+				<div className={navbarFlex ? 'navbarContainer flex' : 'navbarContainer'}>
 						<Navbar/>
+				</div>
+				<div className='navbarMenu' onClick={setNavbar}>
+						<div className='navbarMenuDiv navbarMenuTop'/>
+						<div className='navbarMenuDiv navbarMenuMiddle'/>
+						<div className='navbarMenuDiv navbarMenuBottom'/>
 				</div>
 				<div className='pageContainer'>
 						<Switch>

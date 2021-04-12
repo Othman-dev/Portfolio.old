@@ -15,7 +15,7 @@ const Navbar = () => {
 		const { main, dispatch } = useContext(MainContext);
 
 		const [playing, setPlaying] = useState(false);
-		const [volume, setVolume] = useState({y:0.5})
+		const [volume, setVolume] = useState({y:0})
 
 		const musicClass = classNames({
 				'lightOff': true,
@@ -43,6 +43,7 @@ const Navbar = () => {
 		function musicClick() {
 				dispatch({type: 'musicSwitch'});
 				setPlaying(!playing);
+				playing === false ? setVolume({y:0.5}) : setVolume({y:0})
 
 		};
 
@@ -50,7 +51,23 @@ const Navbar = () => {
 				window.open('https://www.youtube.com/watch?v=HxF_ws9aeB0', '_blank');
 		};
 
-		const sliderStyles = {
+		const sliderStyle = {
+				track: {
+						height: '16vh',
+						width: '.15rem',
+						backgroundColor: 'black',
+						borderRadius: '50%/5%'
+				},
+				active: {
+						backgroundColor: '#7DB003'
+				},
+				thumb: {
+						backgroundColor: '#c0c0c0',
+						borderRadius: '10%/10%',
+						height: '1rem',
+						width: '2rem',
+						boxShadow: '0 0 .3rem .09rem black'
+				}
 		}
 
 return(
@@ -84,14 +101,14 @@ return(
 						</div>
 						<ReactPlayer className='musicPlayer' url='https://www.youtube.com/watch?v=HxF_ws9aeB0' loop={true} volume={volume.y} playing={playing}/>
 				</div>
-				<div className='sliderContainer'>
-						<Slider yreverse={true} axis='y' y={volume.y} ymin={0} ymax={1} ystep={0.1} onChange={setVolume} styles={sliderStyle}/>
-				</div>
 				<div className='switches'>
 						<div className={musicClass}/>
 						<button onClick={musicClick}>
 								<FaMusic className='faMusic'/>
 						</button>
+						<div className='sliderContainer'>
+								<Slider yreverse={true} axis='y' y={volume.y} ymin={0} ymax={1} ystep={0.1} onChange={setVolume} styles={sliderStyle}/>
+						</div>
 						<div className={frenchClass}/>
 						<button onClick={() => dispatch({type: 'frenchSwitch'})}>
 								<div className='flag'>

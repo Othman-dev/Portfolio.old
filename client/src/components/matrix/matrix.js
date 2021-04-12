@@ -12,7 +12,6 @@ const Matrix = () => {
 		// matrix effect on background
 
 		const canvasRef = useRef(null);
-
 		useEffect(() => {
 				const canvas = canvasRef.current;
 				canvas.width = window.innerWidth;
