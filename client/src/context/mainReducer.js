@@ -29,6 +29,10 @@ const MainReducer = (main, action) => {
 						return{
 						...main, 'page': 'contact'
 						};
+				case 'setNavbarFlex':
+						return{
+						...main, 'navbarFlex': !main.navbarFlex
+						};
 				default:
 						return main;
 		};

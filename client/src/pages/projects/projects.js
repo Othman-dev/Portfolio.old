@@ -4,6 +4,7 @@ import Loading from '../../components/loading/loading.js';
 import BaliseLayout, { BaliseOn, BaliseOff } from'../../components/balise/balise.js';
 import { MainContext } from '../../context/mainContext.js';
 import { FaGithub, FaLink } from 'react-icons/fa';
+import ScrollDown from '../../components/scrollDown/scrollDown.js';
 
 const Projects = () => {
 
@@ -18,6 +19,7 @@ return (
 				<Loading title='Projects'/>
 		<div className='projectsContainer'>
 				<BaliseLayout/>
+				<ScrollDown/>
 				<div className='projectsBaliseOn'><BaliseOn content='link'/></div> 
 				<div className='clipContainer'>
 						<div className='clip clip1'>

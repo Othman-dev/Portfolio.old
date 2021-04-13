@@ -4,6 +4,7 @@ import { dataEn, dataFr, circleTopContent, circleRightContent, circleBottomConte
 import Loading from '../../components/loading/loading.js';
 import BaliseLayout, { BaliseOn, BaliseOff } from '../../components/balise/balise.js';
 import { MainContext } from '../../context/mainContext.js';
+import ScrollDown from '../../components/scrollDown/scrollDown.js';
 
 
 const Skills = () => {
@@ -18,6 +19,7 @@ return (
 		<div className='mainDuo'>
 				<Loading title='Skills'/>
 				<BaliseLayout/>
+		<ScrollDown/>
 				<div className='leftSide'>
 						<div className='leftBlock'>
 								<BaliseOn content='h1'/>

@@ -6,6 +6,7 @@ import Balise, { BaliseOn, BaliseOff } from '../../components/balise/balise.js';
 import { MainContext } from '../../context/mainContext.js';
 import ContactMap  from './contactMap.js';
 import Axios from 'axios';
+import ScrollDown from '../../components/scrollDown/scrollDown.js';
 
 
 const Contact = () => {
@@ -39,6 +40,7 @@ return (
 				<Loading title='Contact'/>
 				<div className='leftSide'>
 						<Balise/>
+						<ScrollDown/>
 						<div className='leftBlock'>
 								<BaliseOn content='h1'/>
 								<h1>{!main.french ? dataEn.title : dataFr.title}</h1>	

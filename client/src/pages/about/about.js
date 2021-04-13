@@ -6,6 +6,7 @@ import { MainContext } from '../../context/mainContext.js';
 import { FaLinkedin, FaGithub, FaStackOverflow,  } from 'react-icons/fa';
 import { ReactComponent as Codingame} from './codingame.svg';
 import { dataEn, dataFr } from './aboutData.js';
+import ScrollDown from '../../components/scrollDown/scrollDown.js';
 
 
 const About = () => {
@@ -36,6 +37,7 @@ return (
 		<div className='mainDuo'>
 				<Loading title='About'/>
 				<BaliseLayout/>
+				<ScrollDown/>
 				<div className='leftSide'>
 						<div className='leftBlock'>
 						<BaliseOn content='h1'/>

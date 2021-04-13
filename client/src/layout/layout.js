@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import './layout.scss';
-import MainContextProvider from '../context/mainContext.js';
 import Navbar from '../components/navbar/navbar.js';
 import Matrix from '../components/matrix/matrix.js';
 import {
@@ -14,28 +13,27 @@ import Skills from '../pages/skills/skills.js';
 import Projects from '../pages/projects/projects.js';
 import Contact from '../pages/contact/contact.js';
 import Error from '../pages/error/error.js';
+import { MainContext } from '../context/mainContext.js';
 
 const Layout = () => {
-		
-		const [navbarFlex, setNavbarFlex] = useState(false);
+
+		const { main, dispatch } = useContext(MainContext);
 
 		function setNavbar() {
-				setNavbarFlex(!navbarFlex)
-				console.log(navbarFlex)
+				dispatch({type: 'setNavbarFlex'})
 		}
 
 return(
 		<div className='layout'>
-		<Matrix/>
-		<MainContextProvider>
+				<Matrix/>
 				<Router>
-				<div className={navbarFlex ? 'navbarContainer flex' : 'navbarContainer'}>
+				<div className={main.navbarFlex ? 'navbarContainer flex' : 'navbarContainer'}>
 						<Navbar/>
 				</div>
 				<div className='navbarMenu' onClick={setNavbar}>
-						<div className='navbarMenuDiv navbarMenuTop'/>
-						<div className='navbarMenuDiv navbarMenuMiddle'/>
-						<div className='navbarMenuDiv navbarMenuBottom'/>
+						<div className={main.navbarFlex ? 'navbarMenuDiv navbarMenuTop' : 'navbarMenuDiv'}/>
+						<div className={main.navbarFlex ? 'navbarMenuDiv navbarMenuMiddle' : 'navbarMenuDiv'}/>
+						<div className={main.navbarFlex ? 'navbarMenuDiv navbarMenuBottom' :'navbarMenuDiv'}/>
 				</div>
 				<div className='pageContainer'>
 						<Switch>
@@ -48,7 +46,6 @@ return(
 						</Switch>
 				</div>
 				</Router>
-		</MainContextProvider>
 		</div>
 )};
 

@@ -13,7 +13,8 @@ const MainContextProvider = (props) => {
 		const [main, dispatch] = useReducer(MainReducer, {
 				music: false,
 				french: false,
-				page: 'home'
+				page: 'home',
+				navbarFlex: true
 		});
 
 return(

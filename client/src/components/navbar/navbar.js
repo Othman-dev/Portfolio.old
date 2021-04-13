@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { MainContext } from '../../context/mainContext.js';
 import classNames from 'classnames';
 import Logo from '../../assets/logo.png';
-import Wood from '../../assets/wood.jpg';
+import Wood from '../../assets/wood.jpeg';
 import ReactPlayer from 'react-player/lazy';
 import Slider from 'react-input-slider';
 import { FaMusic } from 'react-icons/fa';
@@ -51,6 +51,9 @@ const Navbar = () => {
 				window.open('https://www.youtube.com/watch?v=HxF_ws9aeB0', '_blank');
 		};
 
+		function linkClick(){
+				dispatch({type: 'setNavbarFlex'})
+		};
 		const sliderStyle = {
 				track: {
 						height: '16vh',
@@ -78,9 +81,9 @@ return(
 				</div>
 				<div className='menu'>
 						<div className='menuTop'>
-								<NavLink className='contact' activeClassName='activeLink' to='/contact'>Contact</NavLink>
-								<NavLink exact className='off' activeClassName='activeLink' to='/'>{!main.french ? 'Home': 'Accueil'}</NavLink>
-								<NavLink className='about' activeClassName='activeLink' to='/about'>{!main.french ? 'About' : 'A propos'}</NavLink>
+								<NavLink className='contact' activeClassName='activeLink' to='/contact' onClick={linkClick}>Contact</NavLink>
+								<NavLink exact className='off' activeClassName='activeLink' to='/' onClick={linkClick}>{!main.french ? 'Home': 'Accueil'}</NavLink>
+								<NavLink className='about' activeClassName='activeLink' to='/about' onClick={linkClick}>{!main.french ? 'About' : 'A propos'}</NavLink>
 						</div>
 						<div className={knobClass}>
 								<div className='knobEffect'/>
@@ -88,8 +91,8 @@ return(
 				
 						</div>
 						<div className='menuBottom'>
-								<NavLink className='projects' activeClassName='activeLink' to='/projects'>{!main.french ? 'Projects' : 'Projets'}</NavLink>
-								<NavLink className='skills' activeClassName='activeLink' to='/skills'>{!main.french ? 'Skills' : 'Aptitudes'}</NavLink>
+								<NavLink className='projects' activeClassName='activeLink' to='/projects' onClick={linkClick}>{!main.french ? 'Projects' : 'Projets'}</NavLink>
+								<NavLink className='skills' activeClassName='activeLink' to='/skills' onClick={linkClick}>{!main.french ? 'Skills' : 'Aptitudes'}</NavLink>
 						</div>
 				</div>
 				<div className='musicContainer' onClick={musicLink}>
