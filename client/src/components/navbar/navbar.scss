@@ -3,7 +3,7 @@
 .navbar {
 		display: flex;
 		height: 100%;
-		width: 100%;
+		width: 20rem;
 		flex-direction: column;
 		align-items: center;
 		font-weight: bold;
@@ -60,7 +60,7 @@
 				position: absolute;
 				top: 2vh;
 				left: 14vh;
-				width: 4vw;
+				width: 5rem;
 				text-decoration: none;
 				color: black;
 		}
@@ -239,5 +239,11 @@
 								border-radius: 0% 20% 20% 0%;
 						}
 				}
+		}
+}
+
+@media only screen and (max-width : 32em) {
+		.navbar {
+				width: 100vw;
 		}
 }

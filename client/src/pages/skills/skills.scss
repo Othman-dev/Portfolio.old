@@ -229,17 +229,17 @@
 
 @media only screen and (max-width : 32em) {
 		.circleRight .skills, .circleTop .skills, .circleBottom .skills{
-				font-size: .4rem;
+				font-size: 2.2vw;
 		}
 		.circleRight .control, .circleTop .frontEnd, .circleBottom .backEnd{
-				font-size: .7rem;
+				font-size: 4.2vw;
 		}
 		.circleRight .mern{
-				font-size: .5rem;
+				font-size: 3.2vw;
 		}
 		.rightSide .circleRight, .rightSide .circleTop, .rightSide .circleBottom {
-				height: 9rem;
-				width: 9rem;
+				height: 55vw;
+				width: 55vw;
 				border: .05rem solid white;
 		}
 }

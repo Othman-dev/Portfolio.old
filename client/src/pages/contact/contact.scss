@@ -12,12 +12,12 @@
 		font-size: 1.2rem;
 		height: 2.5rem;
 		max-width: 25rem;
-		width: 39.5%;
+		width: 45%;
 }
 		
 .formSubject{
 		max-width: 50.2rem;
-		width: 80.5%;	
+		width: 90.5%;	
 		border-radius: 2% / 30%;
 }
 
@@ -26,7 +26,7 @@
 		color: white;
 		height: 15rem;
 		max-width: 50rem;
-		width: 80%;
+		width: 90%;
 		border-radius: 2% / 4%;
 		border: solid 1px #FFFFFF30;
 		font-size: 1.2rem;
@@ -69,7 +69,7 @@
 
 @media only screen and (max-width : 107.5em) {
 		.contactMapContainer{
-				width: 80%;
+				width: 100%;
 				left:10%;
 		}
 }
@@ -96,10 +96,15 @@
 @media only screen and (max-width : 32em) {
 		.formInput {
 				font-size: .8rem;
-				height: 1.2rem;
+				height: 1.8rem;
+				width: 42vw;
+		}
+		.formSubject{
+				width: 85vw;
 		}
 		.formMessage{
-				height: 10rem;
+				height: 12rem;
+				width: 85vw;
 				font-size: .8rem;
 		}
 		.formButton {

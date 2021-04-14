@@ -22,10 +22,13 @@
 		top: 3%;
 		right: 3%;
 		height: 3rem;
+		max-height: 12vw;
 		width: 3rem;
+		max-width: 12vw;
 		display: none;
 		flex-direction: column;
 		justify-content: space-around;
+		transform: translateX(-50%); 
 
 		.navbarMenuDiv{
 				height: 15%;
@@ -35,17 +38,13 @@
 				transition: all .5s;
 		}
 		.navbarMenuTop{
-				height: .6rem;
-				width: 3rem;
-				transform: rotate(45deg) translate(25%,50%);
+				transform: rotate(45deg) translate(27%,50%);
 		}
 		.navbarMenuMiddle{
 				display: none;
 		}
 		.navbarMenuBottom{
-				height: .6rem;
-				width: 3rem;
-				transform: rotate(-45deg) translate(25%,-50%);
+				transform: rotate(-45deg) translate(27%,-50%);
 		}
 }
 
@@ -54,6 +53,7 @@
 		position: relative;
 		left: 18em;
 		width: calc(100vw - 18em);
+  overflow-x: hidden;
 }
 
 .mainDuo {
@@ -99,6 +99,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		overflow: hidden;
 }
 
 
@@ -123,7 +124,6 @@
 		.navbarContainer {
 				display: none;
 				height: 100vh;
-				width: 100vw;
 		}
 		.navbarMenu{
 				display: flex;
@@ -138,3 +138,9 @@
 .flex{
 		display: flex;
 } 
+
+@media only screen and (max-width : 32em) {
+		.navbarContainer {
+				width: 100vw;
+		}
+}

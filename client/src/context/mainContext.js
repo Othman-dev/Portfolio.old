@@ -14,7 +14,7 @@ const MainContextProvider = (props) => {
 				music: false,
 				french: false,
 				page: 'home',
-				navbarFlex: true
+				navbarFlex: false
 		});
 
 return(
