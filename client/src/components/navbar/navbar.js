@@ -58,6 +58,7 @@ const Navbar = () => {
 				track: {
 						height: '16vh',
 						width: '.15rem',
+						minWidth: '.23vh',
 						backgroundColor: 'black',
 						borderRadius: '50%/5%'
 				},
@@ -68,7 +69,9 @@ const Navbar = () => {
 						backgroundColor: '#c0c0c0',
 						borderRadius: '10%/10%',
 						height: '1rem',
+						minHeight: '1.8vh',
 						width: '2rem',
+						minWidth: '3.6vh',
 						boxShadow: '0 0 .3rem .09rem black'
 				}
 		}

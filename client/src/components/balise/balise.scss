@@ -47,6 +47,15 @@
 }
 
 
+/*-----     MEDIA QUERIES     -----*/
+
+
+@media only screen and (min-width : 120em) {
+		.balise,.baliseLayout {
+				font-size: 2.1vh;
+		}
+}
+
 @media only screen and (max-width : 46em) {
 		.balise,.baliseLayout {
 				font-size: 1.2rem;

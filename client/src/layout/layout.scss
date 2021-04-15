@@ -106,6 +106,16 @@
 //-----     MEDIA QUERIES     -----//
 
 
+@media only screen and (min-width : 120em) {
+		.navbarContainer{ 
+				width: 15vw;
+		}
+		.pageContainer{
+				left: 15vw;
+				width: 85vw;
+		}
+}
+
 @media only screen and (max-width : 107.5em) {
 		.mainDuo{
 				flex-direction: column;
