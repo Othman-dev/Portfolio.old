@@ -66,6 +66,22 @@
 }
 
 
+// MEDIA QUERY
+
+
+@media only screen and (min-width : 120em) {
+		.soundLogo {
+				height: 17.5vh;
+				width: 16.7vw;
+				.soundAnim {
+						box-shadow: 0 0 .3vh .3vh $green-logo;
+						height: 1.1vh;
+						width: 1.1vh;
+				}
+		}
+}
+
+
 @media only screen and (max-width : 46em) {
 		.soundLogo {
 				height: 7.5rem;

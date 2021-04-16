@@ -210,6 +210,27 @@
 }
 
 
+// RightSide Content
+
+
+@media only screen and (min-width : 120em) {
+		.circleRight .skills, .circleTop .skills, .circleBottom .skills{
+				font-size: 1.75vh;
+		}
+		.circleRight .control, .circleTop .frontEnd, .circleBottom .backEnd{
+				font-size: 3.5vh;
+		}
+		.circleRight .mern{
+				font-size: 2.7vh;
+		}
+		.rightSide .circleRight, .rightSide .circleTop, .rightSide .circleBottom {
+				height: 45.5vh;
+				width: 45.5vh;
+				border: .3vh solid white;
+		}
+}
+
+
 @media only screen and (max-width : 46em) {
 		.circleRight .skills, .circleTop .skills, .circleBottom .skills{
 				font-size: .8rem;

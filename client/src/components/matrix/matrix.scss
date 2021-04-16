@@ -11,8 +11,8 @@
 
 .holeContainer {
 		position: absolute;
-		height: 12.2rem;
-		width: 12.2rem;
+		height: 23vh;
+		width: 23vh;
 		border-radius: 50%;
 		overflow: hidden;
 		box-shadow: 0px 0px .2vh 1vh $primary;
@@ -97,4 +97,3 @@
 }
 
 
-@media only screen and (max-width : 107.5em) {}

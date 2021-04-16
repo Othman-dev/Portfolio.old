@@ -75,6 +75,36 @@
 		100%{ opacity:1; transform: translateX(0); };
 }
 
+
+/*-----     MEDIA QUERIES     -----*/
+
+
+@media only screen and (min-width : 120em) {
+		.aboutContainer {
+				.aboutLinksOdd, .aboutLinksEven{
+						height: 10.5vh;
+						width: 14.2vw;
+				}
+				.AboutIconLink {
+						height: 5.2vh;
+						width: 5.2vh;
+						margin: .5vh;
+				}
+				.AboutIconLinkCodingame {
+						height: 8.5vh;
+						width: 8.5vh;
+						margin: .8vh;
+				}
+				span{
+						font-size: 2.3vh;
+						bottom: 3vh;
+				}
+				p{
+						font-size: 1.75vh;
+				}
+		}
+}
+
 @media only screen and (max-width : 46em) {
 		.aboutContainer span {
 				font-size: 1.1rem;

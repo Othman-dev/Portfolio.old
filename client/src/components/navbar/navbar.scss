@@ -50,7 +50,7 @@
 
 		.off {
 				position: absolute;
-				top: -1.5vh;
+				top: -2vh;
 				left: 5vh;
 				text-decoration: none;
 				color: black;
@@ -60,7 +60,7 @@
 				position: absolute;
 				top: 2vh;
 				left: 14vh;
-				width: 5rem;
+				width: 60%;
 				text-decoration: none;
 				color: black;
 		}
@@ -242,6 +242,7 @@
 		}
 }
 
+
 /*-----     MEDIA QUERIES     -----*/
 
 
@@ -254,9 +255,9 @@
 				width: 11vw;
 				
 				p{
-						font-size: 1rem;
-						margin-left: 1.2rem;
-						margin-right: 1rem;
+						font-size: 1.8vh;
+						margin-left: 1.85vh;
+						margin-right: 1.85vh;
 				}
 		}
 }
