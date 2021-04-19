@@ -17,13 +17,14 @@ const Contact = () => {
 				dispatch({type: 'contactPage'})
 		},[dispatch]);
 
-		const [message, setMessage] = useState({})
+		const [message, setMessage] = useState({messageSent:false})
 
 		function handleSend(e) {
 				e.preventDefault();
 				Axios.post('/api/email', message)
 				.then((result) => {
 						console.log(result.text);
+						setMessage({...message, messageSent: true})
 				}, (error) => {
 						console.log(error.text);
 				}); 
@@ -61,7 +62,10 @@ return (
 										<br/>
 										<textarea className='formMessage' name='content' placeholder='Message...' type='text' onChange={handleChange} required/>
 										<br/>
-										<input className='formButton' type='submit' value='send'/>
+										<div className='buttonDiv'>
+												<input className='formButton' type='submit' value={!main.french ? 'send' : 'envoyer'}/>
+												<p className={!message.messageSent ? 'messageSent' : 'messageSent messageFlex'}>{!main.french ? 'message sent' : 'message envoyé'}</p>
+										</div>
 								</form>
 								<BaliseOff content='form'/>
 						</div>

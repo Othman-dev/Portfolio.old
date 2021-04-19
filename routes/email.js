@@ -10,9 +10,9 @@ router.post('/', (req, res) => {
 		sendGrid.setApiKey(apiKey);
 		const msg = {
 		to: 'othman@workmail.com',
-		from: req.body.email,
+		from: 'othman@workmail.com',
 		subject: req.body.subject,
-		text: req.body.content + '\n' + req.body.name,
+		text: req.body.name + '\n' + req.body.email  + '\n\n' + req.body.content,
 		};
 
 		sendGrid.send(msg)

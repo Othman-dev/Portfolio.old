@@ -33,6 +33,11 @@
 
 }
 
+.buttonDiv{
+		display: flex;
+		flex-direction: row;
+}
+
 .formButton {
 		position: relative;
 		background-color: $primary-text;
@@ -44,6 +49,15 @@
 		font-size: 1.7rem;
 }
 
+.messageSent {
+		margin-top: 1vh;
+		color: $green-logo;
+		display: none;
+}
+
+.messageFlex {
+		display: flex;
+}
 
 //-----     RIGHT SIDE     -----//
 
@@ -139,3 +153,4 @@
 				font-size: 1rem;
 		}
 }
+
